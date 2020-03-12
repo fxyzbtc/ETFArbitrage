@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#import uvicorn
+import uvicorn
 from fastapi import FastAPI
 import requests
 import simplejson as json
@@ -22,7 +22,7 @@ s.verify = False
 s.mount('http://', HTTPAdapter(max_retries=3))
 s.mount('https://', HTTPAdapter(max_retries=3))
 
-@app.get("/taoli")
+@app.get("/taoli/")
 async def root():
     rows={}
     for name in URLS:
@@ -35,8 +35,8 @@ async def root():
         for item in arbitrage_list:
             j = s.get(TICKER_URL.format(id=item)).json()
             if j['application'] == "1":
-                rows['name'] = {item:{x:j[x] for x in TICKER_TAGS}}
+                rows[item] = {x:j[x] for x in TICKER_TAGS}
     return rows
 
 #if __name__ == "__main__":
-#    uvicorn.run(app, host="0.0.0.0", port=8000)    
+#    uvicorn.run(app, host="0.0.0.0", port=8888)    

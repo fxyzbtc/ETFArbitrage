@@ -1,1 +1,7 @@
 __pychache__/*
+.vscode/*
+bin/*
+lib/*
+*.pid
+*.log
+*.out

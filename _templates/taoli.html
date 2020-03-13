@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}折溢价*可套利*ETF/股债/QDII*基金列表{% endblock %}
+
+{% block content %}
+    <dl class="row">
+        {% for ticker in result %}
+            
+            {% for key, value in ticker.items() %}
+                <dt class="col-sm-3">{{ key|e }}</dt>
+                <dd class="col-sm-9">{{ value|e }}</dd>
+            {% endfor %}
+
+        {% endfor %}
+    </dl>
+{% endblock content %}
+    
+{% block note %}
+    <div class="alert alert-info" role="alert">
+    筛选条件：
+    <ol>
+        <li>集思录数据源</li>
+        <li>折溢价超过6个百分点</li>
+        <li>交易量超过1万手</li>
+        <li>可申购和可赎回</li>
+    </ol>
+    </div>
+{% endblock note %}
+    

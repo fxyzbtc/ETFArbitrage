@@ -20,7 +20,7 @@ URLS = {'ETF':'http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___',
 
 TICKER_URL = 'http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker={id}'
 TICKER_TAGS = ['ticker','name','navPriceRatioFcst', 'navPriceRatio','amplitudes','tradingAmount','application', 'redemption','dependentFundBeans']
-TICKER_TAGS_CN = ['代码','名称','折溢价', '昨日折溢价','振幅价差','交易量','申购', '赎回','依赖的基金']
+TICKER_TAGS_CN = ['代码','名称','今折溢价', '昨折溢价','价格振幅','交易量','申购', '赎回','被依赖基金']
 HEADERS = dict(zip(TICKER_TAGS, TICKER_TAGS_CN))
 
 s = requests.Session()
@@ -57,18 +57,24 @@ def api_taoli():
             application.logger.info('get {}'.format(TICKER_URL.format(id=item)))
             if _fs_filter(fs):
                 fs = {HEADERS[x]:fs[x] for x in HEADERS}
+                dt_string = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
+                fs['date'] = dt_string
                 result['records'].append(fs)
-    # dd/mm/YY H:M:S
-    dt_string = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-    result['date'] = dt_string
-    open('taoli.json').write(json.dumps(result))
+
+    #如果有依赖基金，格式化下
+    for index,record in enumerate(result['records']):
+        if type(record['依赖的基金']) == list:
+            dep_fund = '<br>'.join([','.join(v.values()) for v in record['依赖的基金']])
+            result['records'][index]['依赖的基金'] = dep_fund
+
+    #open(url_for('static', filename='taoli.json'),'w').write(json.dumps(result))
+    open('taoli.json','w').write(json.dumps(result))
     return result
 
 @application.route('/taoli')
 @application.route('/taoli/')
 def taoli():
-    result = open('taoli.json').read()
-    result.simplejson.loads(result)
+    result = json.load(open('taoli.json'))
     return render_template('taoli.html', result=result)
 
 if __name__ == "__main__":

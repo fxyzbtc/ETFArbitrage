@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}折溢价*可套利*ETF/股债/QDII*基金列表{% endblock %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header text-center">
+        
+        <ol class="list-inline">
+            <li class="list-inline-item"></li><span class="badge badge-warning">筛选条件：</span></li>
+            <li class="list-inline-item">沪深LOF/股债/QDII基金，</li>
+            <li class="list-inline-item">折价小于-6%/溢价大于6%，</li>
+            <li class="list-inline-item">1万手以上，</li>
+            <li class="list-inline-item">溢价时可申购/折价时可赎回</li>
+        </ol>    
+    </div>
+    <div class="card-body">
+        <table class="table table-striped table-dark">
+    
+            <thead>
+            <tr>
+                
+            {% for head in result['records'][0].keys() %}
+            <th scope="col">
+            {{ head }}    
+            </th>
+            {% endfor %}
+        
+            </tr>
+            </thead>
+            <tbody>
+                
+                {% for record in result['records'] %}
+                    <tr>
+                        {% for k,v in record.items() %}
+                        <td>
+        
+                            {{ v|safe }}
+        
+                        </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- <div class="card-footer text-muted text-center">
+        
+    <ol class="list-inline">
+        <li class="list-inline-item"></li><span class="badge badge-warning"></span></li>
+    </ol>    
+    </div> -->
+    </div>
+
+
+{% endblock %}
+
+

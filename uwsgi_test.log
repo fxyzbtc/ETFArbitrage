@@ -1,0 +1,2050 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 04:12:34 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/arbitrage_test
+writing pidfile to uwsgi_test.pid
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8000 fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x561b119fe670
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x561b119fe670 pid: 22601 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22601)
+spawned uWSGI worker 1 (pid: 22603, cores: 10)
+spawned uWSGI worker 2 (pid: 22605, cores: 10)
+spawned uWSGI worker 3 (pid: 22606, cores: 10)
+spawned uWSGI worker 4 (pid: 22607, cores: 10)
+spawned uWSGI worker 5 (pid: 22608, cores: 10)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 22603)...
+Gracefully killing worker 2 (pid: 22605)...
+Gracefully killing worker 3 (pid: 22606)...
+Gracefully killing worker 4 (pid: 22607)...
+Gracefully killing worker 5 (pid: 22608)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/arbitrage_test
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:8000)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 04:16:06 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/arbitrage_test
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8000).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 04:16:36 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/arbitrage_test
+writing pidfile to uwsgi_test.pid
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:33179 (port auto-assigned) fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x55da77e59420
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55da77e59420 pid: 22759 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22759)
+spawned uWSGI worker 1 (pid: 22761, cores: 10)
+spawned uWSGI worker 2 (pid: 22762, cores: 10)
+spawned uWSGI worker 3 (pid: 22763, cores: 10)
+spawned uWSGI worker 4 (pid: 22764, cores: 10)
+spawned uWSGI worker 5 (pid: 22765, cores: 10)
+spawned uWSGI http 1 (pid: 22766)
+[2020-03-14 04:16:44,474] INFO in app: get http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___
+[2020-03-14 04:16:50,014] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=510090
+[2020-03-14 04:16:50,252] INFO in app: get http://www.jisilu.cn/data/qdii/qdii_list/?___jsl=LST___
+[2020-03-14 04:16:51,489] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162411
+[2020-03-14 04:16:53,329] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513100
+[2020-03-14 04:16:54,483] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162415
+[2020-03-14 04:16:55,944] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513500
+[2020-03-14 04:16:57,120] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513030
+[2020-03-14 04:16:58,270] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162719
+[2020-03-14 04:16:59,495] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161127
+[2020-03-14 04:17:00,955] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161125
+[2020-03-14 04:17:02,098] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=159941
+[2020-03-14 04:17:03,369] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=160416
+[2020-03-14 04:17:05,349] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161130
+[2020-03-14 04:17:05,688] INFO in app: get http://www.jisilu.cn/data/lof/stock_lof_list/?___jsl=LST___
+[2020-03-14 04:17:07,728] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162414
+[2020-03-14 04:17:08,899] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=165516
+[2020-03-14 04:17:10,849] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=168106
+[2020-03-14 04:17:11,085] INFO in app: get http://www.jisilu.cn/data/lof/index_lof_list/?___jsl=LST___
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 64, in api_taoli
+    open('taoli.json').write(json.dumps(result))
+FileNotFoundError: [Errno 2] No such file or directory: 'taoli.json'
+[pid: 22762|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 316 bytes} [Sat Mar 14 04:16:42 2020] GET /api/taoli/ => generated 0 bytes in 28298 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 22766)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 22761)...
+Gracefully killing worker 2 (pid: 22762)...
+Gracefully killing worker 3 (pid: 22763)...
+Gracefully killing worker 4 (pid: 22764)...
+Gracefully killing worker 5 (pid: 22765)...
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 1945, in shutdown
+    h.flush()
+  File "/usr/lib/python3.6/logging/__init__.py", line 977, in flush
+    if self.stream and hasattr(self.stream, "flush"):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/werkzeug/local.py", line 328, in __bool__
+    return bool(self._get_current_object())
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/logging.py", line 30, in wsgi_errors_stream
+    return request.environ["wsgi.errors"] if request else sys.stderr
+KeyError: 'wsgi.errors'
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/arbitrage_test
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:33179)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 04:22:15 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/arbitrage_test
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:39007 (port auto-assigned) fd 4
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x556ea81d9330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x556ea81d9330 pid: 22759 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 22759)
+spawned uWSGI worker 1 (pid: 23000, cores: 10)
+spawned uWSGI worker 2 (pid: 23001, cores: 10)
+spawned uWSGI worker 3 (pid: 23002, cores: 10)
+spawned uWSGI worker 4 (pid: 23003, cores: 10)
+spawned uWSGI worker 5 (pid: 23004, cores: 10)
+spawned uWSGI http 1 (pid: 23005)
+[2020-03-14 04:22:23,956] INFO in app: get http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___
+[2020-03-14 04:22:26,507] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=510090
+[2020-03-14 04:22:27,071] INFO in app: get http://www.jisilu.cn/data/qdii/qdii_list/?___jsl=LST___
+[2020-03-14 04:22:28,250] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162411
+[2020-03-14 04:22:30,151] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513100
+[2020-03-14 04:22:31,984] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162415
+[2020-03-14 04:22:33,901] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513500
+[2020-03-14 04:22:35,423] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513030
+[2020-03-14 04:22:36,760] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162719
+[2020-03-14 04:22:38,003] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161127
+[2020-03-14 04:22:39,877] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161125
+[2020-03-14 04:22:41,292] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=159941
+[2020-03-14 04:22:42,447] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=160416
+[2020-03-14 04:22:44,276] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161130
+[2020-03-14 04:22:44,607] INFO in app: get http://www.jisilu.cn/data/lof/stock_lof_list/?___jsl=LST___
+[2020-03-14 04:22:46,540] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162414
+[2020-03-14 04:22:48,398] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=165516
+[2020-03-14 04:22:50,365] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=168106
+[2020-03-14 04:22:50,913] INFO in app: get http://www.jisilu.cn/data/lof/index_lof_list/?___jsl=LST___
+[pid: 23003|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 317 bytes} [Sat Mar 14 04:22:21 2020] GET /api/taoli/ => generated 1738 bytes in 29558 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 71, in taoli
+    result.simplejson.loads(result)
+AttributeError: 'str' object has no attribute 'simplejson'
+[pid: 23003|app: 0|req: 2/2] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:24:39 2020] GET /taoli/ => generated 0 bytes in 13 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 3)
+[pid: 23003|app: 0|req: 3/3] 127.0.0.1 () {28 vars in 307 bytes} [Sat Mar 14 04:24:42 2020] GET /taoli => generated 263 bytes in 1 msecs (HTTP/1.1 308) 3 headers in 136 bytes (1 switches on core 5)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 71, in taoli
+    result.simplejson.loads(result)
+AttributeError: 'str' object has no attribute 'simplejson'
+[pid: 23003|app: 0|req: 4/4] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:24:48 2020] GET /taoli/ => generated 0 bytes in 12 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 8)
+gateway "uWSGI http 1" has been buried (pid: 23005)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 23000)...
+Gracefully killing worker 2 (pid: 23001)...
+Gracefully killing worker 3 (pid: 23002)...
+Gracefully killing worker 4 (pid: 23003)...
+Gracefully killing worker 5 (pid: 23004)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/arbitrage_test
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 4 mapped to socket 0 (127.0.0.1:39007)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 04:25:30 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/arbitrage_test
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:38467 (port auto-assigned) fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x56522222d330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x56522222d330 pid: 22759 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 22759)
+spawned uWSGI worker 1 (pid: 23204, cores: 10)
+spawned uWSGI worker 2 (pid: 23205, cores: 10)
+spawned uWSGI worker 3 (pid: 23206, cores: 10)
+spawned uWSGI worker 4 (pid: 23207, cores: 10)
+spawned uWSGI worker 5 (pid: 23208, cores: 10)
+spawned uWSGI http 1 (pid: 23209)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 72, in taoli
+    return render_template('taoli.html', result=result)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 117, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: taoli.html
+[pid: 23204|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:25:33 2020] GET /taoli/ => generated 0 bytes in 23 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 23209)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 23204)...
+Gracefully killing worker 2 (pid: 23205)...
+Gracefully killing worker 3 (pid: 23206)...
+Gracefully killing worker 4 (pid: 23207)...
+Gracefully killing worker 5 (pid: 23208)...
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 1945, in shutdown
+    h.flush()
+  File "/usr/lib/python3.6/logging/__init__.py", line 977, in flush
+    if self.stream and hasattr(self.stream, "flush"):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/werkzeug/local.py", line 328, in __bool__
+    return bool(self._get_current_object())
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/logging.py", line 30, in wsgi_errors_stream
+    return request.environ["wsgi.errors"] if request else sys.stderr
+KeyError: 'wsgi.errors'
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/arbitrage_test
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:38467)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 04:32:42 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/arbitrage_test
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:34997 (port auto-assigned) fd 4
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x56155c8c4330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x56155c8c4330 pid: 22759 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 22759)
+spawned uWSGI worker 1 (pid: 23374, cores: 10)
+spawned uWSGI worker 2 (pid: 23375, cores: 10)
+spawned uWSGI worker 3 (pid: 23376, cores: 10)
+spawned uWSGI worker 4 (pid: 23377, cores: 10)
+spawned uWSGI worker 5 (pid: 23378, cores: 10)
+spawned uWSGI http 1 (pid: 23379)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 70, in taoli
+    result = open(url_for('static')+'taoli.json').read()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'static'. Did you forget to specify values ['filename']?
+[pid: 23377|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:33:06 2020] GET /taoli/ => generated 0 bytes in 21 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 23379)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 23374)...
+Gracefully killing worker 2 (pid: 23375)...
+Gracefully killing worker 3 (pid: 23376)...
+Gracefully killing worker 4 (pid: 23377)...
+Gracefully killing worker 5 (pid: 23378)...
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 1945, in shutdown
+    h.flush()
+  File "/usr/lib/python3.6/logging/__init__.py", line 977, in flush
+    if self.stream and hasattr(self.stream, "flush"):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/werkzeug/local.py", line 328, in __bool__
+    return bool(self._get_current_object())
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/logging.py", line 30, in wsgi_errors_stream
+    return request.environ["wsgi.errors"] if request else sys.stderr
+KeyError: 'wsgi.errors'
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/arbitrage_test
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 4 mapped to socket 0 (127.0.0.1:34997)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 04:34:40 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/arbitrage_test
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:33057 (port auto-assigned) fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x560d5e4ca330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560d5e4ca330 pid: 22759 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 22759)
+spawned uWSGI worker 1 (pid: 23494, cores: 10)
+spawned uWSGI worker 2 (pid: 23495, cores: 10)
+spawned uWSGI worker 3 (pid: 23496, cores: 10)
+spawned uWSGI worker 4 (pid: 23497, cores: 10)
+spawned uWSGI worker 5 (pid: 23498, cores: 10)
+spawned uWSGI http 1 (pid: 23499)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 70, in taoli
+    result = open(url_for('static', filename='taoli.json')).read()
+FileNotFoundError: [Errno 2] No such file or directory: '/static/taoli.json'
+[pid: 23494|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:34:42 2020] GET /taoli/ => generated 0 bytes in 14 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[2020-03-14 04:37:53,008] INFO in app: get http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___
+[2020-03-14 04:37:56,287] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=510090
+[2020-03-14 04:37:56,522] INFO in app: get http://www.jisilu.cn/data/qdii/qdii_list/?___jsl=LST___
+[2020-03-14 04:37:57,724] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162411
+[2020-03-14 04:37:59,657] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513100
+[2020-03-14 04:38:01,516] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162415
+[2020-03-14 04:38:02,748] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513500
+[2020-03-14 04:38:03,909] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513030
+[2020-03-14 04:38:05,844] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162719
+[2020-03-14 04:38:07,556] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161127
+[2020-03-14 04:38:08,729] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161125
+[2020-03-14 04:38:09,984] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=159941
+[2020-03-14 04:38:11,915] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=160416
+[2020-03-14 04:38:13,422] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161130
+[2020-03-14 04:38:13,763] INFO in app: get http://www.jisilu.cn/data/lof/stock_lof_list/?___jsl=LST___
+[2020-03-14 04:38:15,587] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162414
+[2020-03-14 04:38:16,766] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=165516
+[2020-03-14 04:38:17,951] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=168106
+[2020-03-14 04:38:18,187] INFO in app: get http://www.jisilu.cn/data/lof/index_lof_list/?___jsl=LST___
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 64, in api_taoli
+    open(url_for('static', filename='taoli.json'),'w').write(json.dumps(result))
+FileNotFoundError: [Errno 2] No such file or directory: '/static/taoli.json'
+[pid: 23494|app: 0|req: 2/2] 127.0.0.1 () {28 vars in 317 bytes} [Sat Mar 14 04:37:50 2020] GET /api/taoli/ => generated 0 bytes in 27809 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 3)
+gateway "uWSGI http 1" has been buried (pid: 23499)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 23494)...
+Gracefully killing worker 2 (pid: 23495)...
+Gracefully killing worker 3 (pid: 23496)...
+Gracefully killing worker 4 (pid: 23497)...
+Gracefully killing worker 5 (pid: 23498)...
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 1945, in shutdown
+    h.flush()
+  File "/usr/lib/python3.6/logging/__init__.py", line 977, in flush
+    if self.stream and hasattr(self.stream, "flush"):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/werkzeug/local.py", line 328, in __bool__
+    return bool(self._get_current_object())
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/logging.py", line 30, in wsgi_errors_stream
+    return request.environ["wsgi.errors"] if request else sys.stderr
+KeyError: 'wsgi.errors'
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/arbitrage_test
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:33057)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 04:40:33 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/arbitrage_test
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:44695 (port auto-assigned) fd 4
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x560b6a524330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560b6a524330 pid: 22759 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 22759)
+spawned uWSGI worker 1 (pid: 23699, cores: 10)
+spawned uWSGI worker 2 (pid: 23700, cores: 10)
+spawned uWSGI worker 3 (pid: 23701, cores: 10)
+spawned uWSGI worker 4 (pid: 23702, cores: 10)
+spawned uWSGI worker 5 (pid: 23703, cores: 10)
+spawned uWSGI http 1 (pid: 23704)
+[2020-03-14 04:40:38,089] INFO in app: get http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___
+[2020-03-14 04:40:40,417] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=510090
+[2020-03-14 04:40:40,655] INFO in app: get http://www.jisilu.cn/data/qdii/qdii_list/?___jsl=LST___
+[2020-03-14 04:40:41,906] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162411
+[2020-03-14 04:40:43,347] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513100
+[2020-03-14 04:40:45,068] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162415
+[2020-03-14 04:40:46,228] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513500
+[2020-03-14 04:40:48,383] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513030
+[2020-03-14 04:40:50,832] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162719
+[2020-03-14 04:40:51,981] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161127
+[2020-03-14 04:40:53,262] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161125
+[2020-03-14 04:40:54,481] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=159941
+[2020-03-14 04:40:56,416] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=160416
+[2020-03-14 04:40:58,539] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161130
+[2020-03-14 04:41:01,400] INFO in app: get http://www.jisilu.cn/data/lof/stock_lof_list/?___jsl=LST___
+[2020-03-14 04:41:03,352] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162414
+[2020-03-14 04:41:04,528] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=165516
+[2020-03-14 04:41:05,895] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=168106
+[2020-03-14 04:41:06,138] INFO in app: get http://www.jisilu.cn/data/lof/index_lof_list/?___jsl=LST___
+[pid: 23699|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 317 bytes} [Sat Mar 14 04:40:36 2020] GET /api/taoli/ => generated 1738 bytes in 29345 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 23704)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 23699)...
+Gracefully killing worker 2 (pid: 23700)...
+Gracefully killing worker 3 (pid: 23701)...
+Gracefully killing worker 4 (pid: 23702)...
+Gracefully killing worker 5 (pid: 23703)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/arbitrage_test
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 4 mapped to socket 0 (127.0.0.1:44695)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 04:43:35 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/arbitrage_test
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:38511 (port auto-assigned) fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x558f48a68330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x558f48a68330 pid: 22759 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 22759)
+spawned uWSGI worker 1 (pid: 23810, cores: 10)
+spawned uWSGI worker 2 (pid: 23811, cores: 10)
+spawned uWSGI worker 3 (pid: 23812, cores: 10)
+spawned uWSGI worker 4 (pid: 23813, cores: 10)
+spawned uWSGI worker 5 (pid: 23814, cores: 10)
+spawned uWSGI http 1 (pid: 23815)
+[2020-03-14 04:43:49,913] INFO in app: get http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___
+[2020-03-14 04:43:51,992] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=510090
+[2020-03-14 04:43:52,212] INFO in app: get http://www.jisilu.cn/data/qdii/qdii_list/?___jsl=LST___
+[2020-03-14 04:43:53,431] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162411
+[2020-03-14 04:43:54,621] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513100
+[2020-03-14 04:43:55,944] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162415
+[2020-03-14 04:43:57,418] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513500
+[2020-03-14 04:43:58,576] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513030
+[2020-03-14 04:43:59,948] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162719
+[2020-03-14 04:44:01,810] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161127
+[2020-03-14 04:44:02,940] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161125
+[2020-03-14 04:44:04,121] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=159941
+[2020-03-14 04:44:05,990] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=160416
+[2020-03-14 04:44:07,410] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161130
+[2020-03-14 04:44:08,074] INFO in app: get http://www.jisilu.cn/data/lof/stock_lof_list/?___jsl=LST___
+[2020-03-14 04:44:09,481] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162414
+[2020-03-14 04:44:11,593] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=165516
+[2020-03-14 04:44:13,493] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=168106
+[2020-03-14 04:44:13,719] INFO in app: get http://www.jisilu.cn/data/lof/index_lof_list/?___jsl=LST___
+[pid: 23810|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 317 bytes} [Sat Mar 14 04:43:47 2020] GET /api/taoli/ => generated 1738 bytes in 26307 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 73, in taoli
+    return render_template('taoli.html', result=result)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/ubuntu/arbitrage_test/templates/base.html", line 28, in top-level template code
+    {% block content %}
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 8, in block "content"
+    {% for key, value in ticker.items() %}
+jinja2.exceptions.UndefinedError: 'str object' has no attribute 'items'
+[pid: 23810|app: 0|req: 2/2] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:45:14 2020] GET /taoli/ => generated 0 bytes in 37 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 6)
+[pid: 23810|app: 0|req: 3/3] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:49:10 2020] GET /taoli/ => generated 5528 bytes in 49 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+gateway "uWSGI http 1" has been buried (pid: 23815)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 23810)...
+Gracefully killing worker 2 (pid: 23811)...
+Gracefully killing worker 3 (pid: 23812)...
+Gracefully killing worker 4 (pid: 23813)...
+Gracefully killing worker 5 (pid: 23814)...
+worker 1 buried after 5 seconds
+worker 2 buried after 5 seconds
+worker 3 buried after 5 seconds
+worker 4 buried after 5 seconds
+worker 5 buried after 5 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/arbitrage_test
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:38511)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 04:49:45 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/arbitrage_test
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:34049 (port auto-assigned) fd 4
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x561a95356330
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x561a95356330 pid: 22759 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 22759)
+spawned uWSGI worker 1 (pid: 24028, cores: 10)
+spawned uWSGI worker 2 (pid: 24029, cores: 10)
+spawned uWSGI worker 3 (pid: 24030, cores: 10)
+spawned uWSGI worker 4 (pid: 24031, cores: 10)
+spawned uWSGI worker 5 (pid: 24032, cores: 10)
+spawned uWSGI http 1 (pid: 24033)
+[pid: 24028|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:51:38 2020] GET /taoli/ => generated 5528 bytes in 59 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 24028|app: 0|req: 2/2] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:52:09 2020] GET /taoli/ => generated 5528 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 2)
+[pid: 24028|app: 0|req: 3/3] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:52:11 2020] GET /taoli/ => generated 5528 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 24028|app: 0|req: 4/4] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:52:12 2020] GET /taoli/ => generated 5528 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 24028|app: 0|req: 5/5] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:52:13 2020] GET /taoli/ => generated 5528 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+[pid: 24028|app: 0|req: 6/6] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:52:15 2020] GET /taoli/ => generated 5528 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+[pid: 24028|app: 0|req: 7/7] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:52:19 2020] GET /taoli/ => generated 5528 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 24028|app: 0|req: 8/8] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 04:53:09 2020] GET /taoli/ => generated 5528 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 09:18:32 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1060-aws #62-Ubuntu SMP Tue Feb 11 21:23:22 UTC 2020
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/systemd/system
+writing pidfile to /home/ubuntu/arbitrage_test/uwsgi_test.pid
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:40349 (port auto-assigned) fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x55a310d7f480
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55a310d7f480 pid: 2960 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2960)
+spawned uWSGI worker 1 (pid: 2962, cores: 10)
+spawned uWSGI worker 2 (pid: 2963, cores: 10)
+spawned uWSGI worker 3 (pid: 2964, cores: 10)
+spawned uWSGI worker 4 (pid: 2965, cores: 10)
+spawned uWSGI worker 5 (pid: 2966, cores: 10)
+spawned uWSGI http 1 (pid: 2967)
+[pid: 2962|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 297 bytes} [Sat Mar 14 09:21:55 2020] GET / => generated 232 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 2962|app: 0|req: 2/2] 127.0.0.1 () {28 vars in 319 bytes} [Sat Mar 14 09:22:03 2020] GET /test/taoli/ => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+[pid: 2962|app: 0|req: 3/3] 127.0.0.1 () {28 vars in 309 bytes} [Sat Mar 14 09:22:10 2020] GET /taoli/ => generated 5528 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 2962|app: 0|req: 4/4] 127.0.0.1 () {28 vars in 307 bytes} [Sat Mar 14 09:22:13 2020] GET /taoli/ => generated 5528 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 2962|app: 0|req: 5/5] 127.0.0.1 () {28 vars in 308 bytes} [Sat Mar 14 09:22:15 2020] GET /taoli/ => generated 5528 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[2020-03-14 09:22:22,755] INFO in app: get http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___
+[2020-03-14 09:22:27,521] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=510090
+[2020-03-14 09:22:28,061] INFO in app: get http://www.jisilu.cn/data/qdii/qdii_list/?___jsl=LST___
+[2020-03-14 09:22:29,884] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162411
+[2020-03-14 09:22:31,072] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513100
+[2020-03-14 09:22:32,440] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162415
+[2020-03-14 09:22:33,612] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513500
+[2020-03-14 09:22:34,883] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513030
+[2020-03-14 09:22:36,034] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162719
+[2020-03-14 09:22:38,100] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161127
+[2020-03-14 09:22:39,452] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161125
+[2020-03-14 09:22:40,757] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=159941
+[2020-03-14 09:22:41,980] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=160416
+[2020-03-14 09:22:43,368] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161130
+[2020-03-14 09:22:43,697] INFO in app: get http://www.jisilu.cn/data/lof/stock_lof_list/?___jsl=LST___
+[2020-03-14 09:22:45,480] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162414
+[2020-03-14 09:22:46,754] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=165516
+[2020-03-14 09:22:48,116] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=168106
+[2020-03-14 09:22:48,346] INFO in app: get http://www.jisilu.cn/data/lof/index_lof_list/?___jsl=LST___
+[pid: 2962|app: 0|req: 6/6] 127.0.0.1 () {28 vars in 316 bytes} [Sat Mar 14 09:22:21 2020] GET /api/taoli/ => generated 1738 bytes in 27195 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 3)
+gateway "uWSGI http 1" has been buried (pid: 2967)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 2962)...
+Gracefully killing worker 2 (pid: 2963)...
+Gracefully killing worker 3 (pid: 2964)...
+Gracefully killing worker 4 (pid: 2965)...
+Gracefully killing worker 5 (pid: 2966)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /etc/systemd/system
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:40349)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/ubuntu/arbitrage_test/uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 09:58:20 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1060-aws #62-Ubuntu SMP Tue Feb 11 21:23:22 UTC 2020
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/systemd/system
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:44225 (port auto-assigned) fd 4
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x557b36ae8390
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x557b36ae8390 pid: 2960 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2960)
+spawned uWSGI worker 1 (pid: 3643, cores: 10)
+spawned uWSGI worker 2 (pid: 3644, cores: 10)
+spawned uWSGI worker 3 (pid: 3645, cores: 10)
+spawned uWSGI worker 4 (pid: 3646, cores: 10)
+spawned uWSGI worker 5 (pid: 3647, cores: 10)
+spawned uWSGI http 1 (pid: 3648)
+gateway "uWSGI http 1" has been buried (pid: 3648)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 3643)...
+Gracefully killing worker 2 (pid: 3644)...
+Gracefully killing worker 3 (pid: 3645)...
+Gracefully killing worker 4 (pid: 3646)...
+Gracefully killing worker 5 (pid: 3647)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /etc/systemd/system
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 4 mapped to socket 0 (127.0.0.1:44225)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/ubuntu/arbitrage_test/uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 09:59:25 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1060-aws #62-Ubuntu SMP Tue Feb 11 21:23:22 UTC 2020
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/systemd/system
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8080 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:40905 (port auto-assigned) fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x557dff4ec390
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x557dff4ec390 pid: 2960 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2960)
+spawned uWSGI worker 1 (pid: 3710, cores: 10)
+spawned uWSGI worker 2 (pid: 3711, cores: 10)
+spawned uWSGI worker 3 (pid: 3712, cores: 10)
+spawned uWSGI worker 4 (pid: 3713, cores: 10)
+spawned uWSGI worker 5 (pid: 3714, cores: 10)
+spawned uWSGI http 1 (pid: 3715)
+gateway "uWSGI http 1" has been buried (pid: 3715)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 3710)...
+Gracefully killing worker 2 (pid: 3711)...
+Gracefully killing worker 3 (pid: 3712)...
+Gracefully killing worker 4 (pid: 3713)...
+Gracefully killing worker 5 (pid: 3714)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /etc/systemd/system
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:40905)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/ubuntu/arbitrage_test/uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 10:01:54 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1060-aws #62-Ubuntu SMP Tue Feb 11 21:23:22 UTC 2020
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/systemd/system
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/invest_test.sock fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x5601a8612ad0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5601a8612ad0 pid: 2960 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2960)
+spawned uWSGI worker 1 (pid: 3822, cores: 10)
+spawned uWSGI worker 2 (pid: 3823, cores: 10)
+spawned uWSGI worker 3 (pid: 3824, cores: 10)
+spawned uWSGI worker 4 (pid: 3825, cores: 10)
+spawned uWSGI worker 5 (pid: 3826, cores: 10)
+[pid: 3822|app: 0|req: 1/1] 202.184.199.34 () {44 vars in 854 bytes} [Sat Mar 14 10:40:22 2020] GET /taoli/ => generated 5528 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 3822|app: 0|req: 2/2] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 10:51:38 2020] GET /taoli/ => generated 5352 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 2)
+[pid: 3822|app: 0|req: 3/3] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 10:52:16 2020] GET /taoli/ => generated 5352 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 3822|app: 0|req: 4/4] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 10:53:02 2020] GET /taoli/ => generated 5366 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 3822|app: 0|req: 5/5] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 10:53:24 2020] GET /taoli/ => generated 5645 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 3822|app: 0|req: 6/6] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 10:53:49 2020] GET /taoli/ => generated 5645 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 3822|app: 0|req: 7/7] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 10:54:17 2020] GET /taoli/ => generated 5703 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+[pid: 3822|app: 0|req: 8/8] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 10:54:50 2020] GET /taoli/ => generated 5658 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 73, in taoli
+    return render_template('taoli.html', result=result)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 30, in template
+    {{ '|'.join(ticker.values() }}
+jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
+[pid: 3822|app: 0|req: 9/9] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 10:59:31 2020] GET /taoli/ => generated 0 bytes in 27 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 9)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 73, in taoli
+    return render_template('taoli.html', result=result)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/ubuntu/arbitrage_test/templates/base.html", line 28, in top-level template code
+    {% block content %}
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 27, in block "content"
+    {% if type(v['依赖的基金']) == list %}
+jinja2.exceptions.UndefinedError: 'type' is undefined
+[pid: 3822|app: 0|req: 10/10] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:00:36 2020] GET /taoli/ => generated 0 bytes in 25 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 3822|app: 0|req: 11/11] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:01:25 2020] GET /taoli/ => generated 8918 bytes in 9 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 3822|app: 0|req: 12/12] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:02:12 2020] GET /taoli/ => generated 8061 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 2)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 73, in taoli
+    return render_template('taoli.html', result=result)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 34, in template
+    {%if v['依赖的基金'] == '--' }
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+[pid: 3822|app: 0|req: 13/13] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:03:07 2020] GET /taoli/ => generated 0 bytes in 18 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+[pid: 3822|app: 0|req: 14/14] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:03:25 2020] GET /taoli/ => generated 8837 bytes in 9 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 3822|app: 0|req: 15/15] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:04:34 2020] GET /taoli/ => generated 6792 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 3822|app: 0|req: 16/16] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:06:43 2020] GET /taoli/ => generated 6218 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 3822|app: 0|req: 17/17] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:08:08 2020] GET /taoli/ => generated 8675 bytes in 9 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 73, in taoli
+    return render_template('taoli.html', result=result)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/ubuntu/arbitrage_test/templates/base.html", line 28, in top-level template code
+    {% block content %}
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 30, in block "content"
+    {{ '|'.join(ticker.values()) }}
+jinja2.exceptions.UndefinedError: 'str object' has no attribute 'values'
+[pid: 3822|app: 0|req: 18/18] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:08:31 2020] GET /taoli/ => generated 0 bytes in 22 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 8)
+[pid: 3822|app: 0|req: 19/19] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:10:32 2020] GET /taoli/ => generated 5658 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+[pid: 3822|app: 0|req: 20/20] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:13:08 2020] GET /taoli/ => generated 5658 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 3822|app: 0|req: 21/21] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:18:32 2020] GET /taoli/ => generated 5658 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 3822|app: 0|req: 22/22] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:19:59 2020] GET /taoli/ => generated 5084 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 2)
+[pid: 3822|app: 0|req: 23/23] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:20:14 2020] GET /taoli/ => generated 5084 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 3822|app: 0|req: 24/24] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:20:29 2020] GET /taoli/ => generated 5841 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 3822|app: 0|req: 25/25] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:21:01 2020] GET /taoli/ => generated 5111 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 3822|app: 0|req: 26/26] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:22:29 2020] GET /taoli/ => generated 5084 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 81 bytes (2 switches on core 4)
+[pid: 3822|app: 0|req: 27/27] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:22:30 2020] GET /taoli/ => generated 5084 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+[pid: 3822|app: 0|req: 28/28] 202.184.199.34 () {46 vars in 905 bytes} [Sat Mar 14 11:23:09 2020] GET /taoli/ => generated 5435 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+[pid: 3822|app: 0|req: 29/29] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:23:56 2020] GET /taoli/ => generated 5712 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 73, in taoli
+    return render_template('taoli.html', result=result)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/ubuntu/arbitrage_test/templates/base.html", line 28, in top-level template code
+    {% block content %}
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 27, in block "content"
+    {{ '<br>'.join(v.split('}, {')) }}
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'split'
+[pid: 3822|app: 0|req: 30/30] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:29:19 2020] GET /taoli/ => generated 0 bytes in 31 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 73, in taoli
+    return render_template('taoli.html', result=result)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/ubuntu/arbitrage_test/templates/base.html", line 28, in top-level template code
+    {% block content %}
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 27, in block "content"
+    {{ '<br>'.join(v) }}
+TypeError: sequence item 0: expected str instance, dict found
+[pid: 3822|app: 0|req: 31/31] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:29:56 2020] GET /taoli/ => generated 0 bytes in 20 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 5)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 73, in taoli
+    
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/ubuntu/arbitrage_test/templates/base.html", line 28, in top-level template code
+    {% block content %}
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 27, in block "content"
+    {{ '<br>'.join(v) }}
+TypeError: sequence item 0: expected str instance, dict found
+[pid: 3826|app: 0|req: 1/32] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:37:16 2020] GET /taoli/ => generated 0 bytes in 83 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 2)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 73, in taoli
+    
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/ubuntu/arbitrage_test/templates/base.html", line 28, in top-level template code
+    {% block content %}
+  File "/home/ubuntu/arbitrage_test/templates/taoli.html", line 27, in block "content"
+    {{ '<br>'.join(v) }}
+TypeError: sequence item 0: expected str instance, dict found
+[pid: 3822|app: 0|req: 32/33] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:37:37 2020] GET /taoli/ => generated 0 bytes in 14 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 2)
+[pid: 3822|app: 0|req: 33/34] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:37:54 2020] GET /taoli/ => generated 5712 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 3822|app: 0|req: 34/35] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:41:40 2020] GET /taoli/ => generated 5712 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 3822|app: 0|req: 35/36] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:41:43 2020] GET /taoli/ => generated 5712 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 3822|app: 0|req: 36/37] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:50:39 2020] GET /taoli/ => generated 5712 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+[pid: 3822|app: 0|req: 37/38] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:50:43 2020] GET /taoli/ => generated 5712 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+[pid: 3822|app: 0|req: 38/39] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:51:21 2020] GET /taoli/ => generated 5712 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+[pid: 3822|app: 0|req: 39/40] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 11:51:24 2020] GET /taoli/ => generated 5712 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 3823|app: 0|req: 1/41] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 13:24:37 2020] GET /taoli/ => generated 5712 bytes in 64 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 3822|app: 0|req: 40/42] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 13:37:09 2020] GET /taoli/ => generated 5712 bytes in 9 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 3822|app: 0|req: 41/43] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 13:37:26 2020] GET /taoli/ => generated 5712 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 2)
+[pid: 3823|app: 0|req: 2/44] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 13:50:32 2020] GET /taoli/ => generated 5712 bytes in 43 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 3822|app: 0|req: 42/45] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 13:50:34 2020] GET /taoli/ => generated 5712 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 3822|app: 0|req: 43/46] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 13:50:36 2020] GET /taoli/ => generated 5712 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 3824|app: 0|req: 1/47] 202.184.199.34 () {44 vars in 854 bytes} [Sat Mar 14 13:59:37 2020] GET /taoli/ => generated 5712 bytes in 59 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[2020-03-14 14:05:40,854] INFO in app: get http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___
+[2020-03-14 14:05:42,549] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=510090
+[2020-03-14 14:05:42,777] INFO in app: get http://www.jisilu.cn/data/qdii/qdii_list/?___jsl=LST___
+[2020-03-14 14:05:44,906] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162411
+[2020-03-14 14:05:46,426] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513100
+[2020-03-14 14:05:47,860] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162415
+[2020-03-14 14:05:49,352] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513500
+[2020-03-14 14:05:50,854] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513030
+[2020-03-14 14:05:52,914] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162719
+[2020-03-14 14:05:54,108] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161127
+[2020-03-14 14:05:56,109] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161125
+[2020-03-14 14:05:57,601] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=159941
+[2020-03-14 14:05:58,973] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=160416
+[2020-03-14 14:06:00,712] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161130
+[2020-03-14 14:06:01,053] INFO in app: get http://www.jisilu.cn/data/lof/stock_lof_list/?___jsl=LST___
+[2020-03-14 14:06:04,187] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162414
+[2020-03-14 14:06:05,712] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=165516
+[2020-03-14 14:06:07,210] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=168106
+[2020-03-14 14:06:07,442] INFO in app: get http://www.jisilu.cn/data/lof/index_lof_list/?___jsl=LST___
+[pid: 3826|app: 0|req: 2/48] 202.184.199.34 () {46 vars in 893 bytes} [Sat Mar 14 14:05:39 2020] GET /api/taoli/ => generated 1738 bytes in 28149 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 4)
+[pid: 3822|app: 0|req: 44/49] 202.184.199.34 () {44 vars in 854 bytes} [Sat Mar 14 14:06:25 2020] GET /taoli/ => generated 5712 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+[pid: 3822|app: 0|req: 45/50] 202.184.199.34 () {44 vars in 784 bytes} [Sat Mar 14 14:06:25 2020] GET /_static/style.css => generated 232 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 3822|app: 0|req: 46/51] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:06:28 2020] GET /taoli/ => generated 5712 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 3822|app: 0|req: 47/52] 202.184.199.34 () {44 vars in 784 bytes} [Sat Mar 14 14:06:28 2020] GET /_static/style.css => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 5)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 3822)...
+Gracefully killing worker 2 (pid: 3823)...
+Gracefully killing worker 3 (pid: 3824)...
+Gracefully killing worker 4 (pid: 3825)...
+Gracefully killing worker 5 (pid: 3826)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /etc/systemd/system
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/tmp/invest_test.sock)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/ubuntu/arbitrage_test/uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 14:07:59 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1060-aws #62-Ubuntu SMP Tue Feb 11 21:23:22 UTC 2020
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/systemd/system
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /tmp/invest_test.sock fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x5609a9034a50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5609a9034a50 pid: 2960 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2960)
+spawned uWSGI worker 1 (pid: 8459, cores: 10)
+spawned uWSGI worker 2 (pid: 8460, cores: 10)
+spawned uWSGI worker 3 (pid: 8461, cores: 10)
+spawned uWSGI worker 4 (pid: 8462, cores: 10)
+spawned uWSGI worker 5 (pid: 8463, cores: 10)
+[pid: 8463|app: 0|req: 1/1] 185.67.237.94 () {32 vars in 457 bytes} [Sat Mar 14 14:08:19 2020] GET / => generated 232 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 8459)...
+Gracefully killing worker 2 (pid: 8460)...
+Gracefully killing worker 3 (pid: 8461)...
+Gracefully killing worker 4 (pid: 8462)...
+Gracefully killing worker 5 (pid: 8463)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /etc/systemd/system
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/tmp/invest_test.sock)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/ubuntu/arbitrage_test/uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 14:08:45 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1060-aws #62-Ubuntu SMP Tue Feb 11 21:23:22 UTC 2020
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/systemd/system
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /tmp/invest_test.sock fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x55d9533d3a50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55d9533d3a50 pid: 2960 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2960)
+spawned uWSGI worker 1 (pid: 8539, cores: 10)
+spawned uWSGI worker 2 (pid: 8540, cores: 10)
+spawned uWSGI worker 3 (pid: 8541, cores: 10)
+spawned uWSGI worker 4 (pid: 8542, cores: 10)
+spawned uWSGI worker 5 (pid: 8552, cores: 10)
+[2020-03-14 14:09:00,738] INFO in app: get http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___
+[2020-03-14 14:09:04,932] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=510090
+[2020-03-14 14:09:05,166] INFO in app: get http://www.jisilu.cn/data/qdii/qdii_list/?___jsl=LST___
+[2020-03-14 14:09:07,351] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162411
+[2020-03-14 14:09:09,264] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513100
+[2020-03-14 14:09:10,468] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162415
+[2020-03-14 14:09:11,884] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513500
+[2020-03-14 14:09:13,767] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513030
+[2020-03-14 14:09:14,927] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162719
+[2020-03-14 14:09:16,761] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161127
+[2020-03-14 14:09:18,618] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161125
+[2020-03-14 14:09:19,887] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=159941
+[2020-03-14 14:09:21,756] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=160416
+[2020-03-14 14:09:23,645] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161130
+[2020-03-14 14:09:23,991] INFO in app: get http://www.jisilu.cn/data/lof/stock_lof_list/?___jsl=LST___
+[2020-03-14 14:09:25,594] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162414
+[2020-03-14 14:09:26,815] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=165516
+[2020-03-14 14:09:27,994] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=168106
+[2020-03-14 14:09:28,232] INFO in app: get http://www.jisilu.cn/data/lof/index_lof_list/?___jsl=LST___
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 67, in api_taoli
+    dep_fund = '\n'.join([','.join(v.values()) for v in r['依赖的基金']])
+NameError: name 'r' is not defined
+[pid: 8542|app: 0|req: 1/1] 202.184.199.34 () {46 vars in 893 bytes} [Sat Mar 14 14:08:58 2020] GET /api/taoli/ => generated 0 bytes in 30098 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 8539)...
+Gracefully killing worker 2 (pid: 8540)...
+Gracefully killing worker 3 (pid: 8541)...
+Gracefully killing worker 4 (pid: 8542)...
+Gracefully killing worker 5 (pid: 8552)...
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 1945, in shutdown
+    h.flush()
+  File "/usr/lib/python3.6/logging/__init__.py", line 977, in flush
+    if self.stream and hasattr(self.stream, "flush"):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/werkzeug/local.py", line 328, in __bool__
+    return bool(self._get_current_object())
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/logging.py", line 30, in wsgi_errors_stream
+    return request.environ["wsgi.errors"] if request else sys.stderr
+KeyError: 'wsgi.errors'
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /etc/systemd/system
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/tmp/invest_test.sock)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/ubuntu/arbitrage_test/uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 14:10:12 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1060-aws #62-Ubuntu SMP Tue Feb 11 21:23:22 UTC 2020
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/systemd/system
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /tmp/invest_test.sock fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x55c1d899aa50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c1d899aa50 pid: 2960 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2960)
+spawned uWSGI worker 1 (pid: 8696, cores: 10)
+spawned uWSGI worker 2 (pid: 8697, cores: 10)
+spawned uWSGI worker 3 (pid: 8698, cores: 10)
+spawned uWSGI worker 4 (pid: 8699, cores: 10)
+spawned uWSGI worker 5 (pid: 8700, cores: 10)
+[2020-03-14 14:10:26,588] INFO in app: get http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___
+[2020-03-14 14:10:28,295] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=510090
+[2020-03-14 14:10:28,826] INFO in app: get http://www.jisilu.cn/data/qdii/qdii_list/?___jsl=LST___
+[2020-03-14 14:10:30,048] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162411
+[2020-03-14 14:10:31,231] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513100
+[2020-03-14 14:10:33,188] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162415
+[2020-03-14 14:10:34,356] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513500
+[2020-03-14 14:10:35,805] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513030
+[2020-03-14 14:10:37,293] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162719
+[2020-03-14 14:10:38,633] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161127
+[2020-03-14 14:10:40,558] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161125
+[2020-03-14 14:10:41,985] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=159941
+[2020-03-14 14:10:43,884] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=160416
+[2020-03-14 14:10:45,057] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161130
+[2020-03-14 14:10:46,012] INFO in app: get http://www.jisilu.cn/data/lof/stock_lof_list/?___jsl=LST___
+[2020-03-14 14:10:47,193] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162414
+[2020-03-14 14:10:48,381] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=165516
+[2020-03-14 14:10:49,849] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=168106
+[2020-03-14 14:10:50,081] INFO in app: get http://www.jisilu.cn/data/lof/index_lof_list/?___jsl=LST___
+[pid: 8696|app: 0|req: 1/1] 202.184.199.34 () {46 vars in 893 bytes} [Sat Mar 14 14:10:21 2020] GET /api/taoli/ => generated 1550 bytes in 29061 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 78, in taoli
+    result = json.load(result)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/simplejson/__init__.py", line 467, in load
+    return loads(fp.read(),
+AttributeError: 'str' object has no attribute 'read'
+[pid: 8696|app: 0|req: 2/2] 202.184.199.34 () {46 vars in 878 bytes} [Sat Mar 14 14:11:06 2020] GET /taoli/ => generated 0 bytes in 16 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2449, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1866, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 78, in taoli
+    result = json.load(result)
+  File "/home/ubuntu/arbitrage_test/venv/lib/python3.6/site-packages/simplejson/__init__.py", line 467, in load
+    return loads(fp.read(),
+AttributeError: 'str' object has no attribute 'read'
+[pid: 8696|app: 0|req: 3/3] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:11:09 2020] GET /taoli/ => generated 0 bytes in 15 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 2)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 8696)...
+Gracefully killing worker 2 (pid: 8697)...
+Gracefully killing worker 3 (pid: 8698)...
+Gracefully killing worker 4 (pid: 8699)...
+Gracefully killing worker 5 (pid: 8700)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /etc/systemd/system
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/tmp/invest_test.sock)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/ubuntu/arbitrage_test/uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 14:13:04 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1060-aws #62-Ubuntu SMP Tue Feb 11 21:23:22 UTC 2020
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/systemd/system
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /tmp/invest_test.sock fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x5627bdba9a50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5627bdba9a50 pid: 2960 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2960)
+spawned uWSGI worker 1 (pid: 8886, cores: 10)
+spawned uWSGI worker 2 (pid: 8887, cores: 10)
+spawned uWSGI worker 3 (pid: 8888, cores: 10)
+spawned uWSGI worker 4 (pid: 8889, cores: 10)
+spawned uWSGI worker 5 (pid: 8890, cores: 10)
+[pid: 8890|app: 0|req: 1/1] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:13:10 2020] GET /taoli/ => generated 5809 bytes in 24 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 8890|app: 0|req: 2/2] 202.184.199.34 () {44 vars in 784 bytes} [Sat Mar 14 14:13:10 2020] GET /_static/style.css => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 6)
+[pid: 8888|app: 0|req: 1/3] 202.184.199.34 () {44 vars in 784 bytes} [Sat Mar 14 14:13:29 2020] GET /_static/style.css => generated 232 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 8888|app: 0|req: 2/4] 202.184.199.34 () {46 vars in 905 bytes} [Sat Mar 14 14:13:57 2020] GET /taoli/ => generated 5809 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 8888|app: 0|req: 3/5] 202.184.199.34 () {44 vars in 804 bytes} [Sat Mar 14 14:13:57 2020] GET /_static/style.css => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 2)
+[pid: 8888|app: 0|req: 4/6] 202.184.199.34 () {44 vars in 784 bytes} [Sat Mar 14 14:14:03 2020] GET /_static/style.css => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 3)
+[2020-03-14 14:20:07,794] INFO in app: get http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___
+[pid: 8888|app: 0|req: 6/7] 202.184.199.34 () {46 vars in 878 bytes} [Sat Mar 14 14:20:09 2020] GET /taoli/ => generated 5809 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 8888|app: 0|req: 7/8] 202.184.199.34 () {46 vars in 808 bytes} [Sat Mar 14 14:20:09 2020] GET /_static/style.css => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 6)
+[2020-03-14 14:20:10,400] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=510090
+[2020-03-14 14:20:10,972] INFO in app: get http://www.jisilu.cn/data/qdii/qdii_list/?___jsl=LST___
+[2020-03-14 14:20:12,217] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162411
+[pid: 8888|app: 0|req: 8/9] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:20:13 2020] GET /taoli/ => generated 5809 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 8888|app: 0|req: 9/10] 202.184.199.34 () {44 vars in 784 bytes} [Sat Mar 14 14:20:13 2020] GET /_static/style.css => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 9)
+[2020-03-14 14:20:13,624] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513100
+[2020-03-14 14:20:15,730] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162415
+[2020-03-14 14:20:17,961] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513500
+[2020-03-14 14:20:19,360] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513030
+[2020-03-14 14:20:22,027] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162719
+[2020-03-14 14:20:24,104] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161127
+[2020-03-14 14:20:25,291] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161125
+[2020-03-14 14:20:27,214] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=159941
+[2020-03-14 14:20:28,389] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=160416
+[2020-03-14 14:20:29,781] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161130
+[2020-03-14 14:20:30,447] INFO in app: get http://www.jisilu.cn/data/lof/stock_lof_list/?___jsl=LST___
+[2020-03-14 14:20:32,522] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162414
+[2020-03-14 14:20:34,177] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=165516
+[2020-03-14 14:20:35,362] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=168106
+[2020-03-14 14:20:35,937] INFO in app: get http://www.jisilu.cn/data/lof/index_lof_list/?___jsl=LST___
+Sat Mar 14 14:20:35 2020 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /api/taoli/ (202.184.199.34)
+OSError: write error
+[pid: 8888|app: 0|req: 9/11] 202.184.199.34 () {44 vars in 862 bytes} [Sat Mar 14 14:20:03 2020] GET /api/taoli/ => generated 0 bytes in 32050 msecs (HTTP/1.1 200) 2 headers in 0 bytes (0 switches on core 4)
+[pid: 8888|app: 0|req: 10/12] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:21:41 2020] GET /taoli/ => generated 5910 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+[pid: 8890|app: 0|req: 3/13] 202.184.199.34 () {44 vars in 784 bytes} [Sat Mar 14 14:21:41 2020] GET /_static/style.css => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 5)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 8886)...
+Gracefully killing worker 2 (pid: 8887)...
+Gracefully killing worker 3 (pid: 8888)...
+Gracefully killing worker 4 (pid: 8889)...
+Gracefully killing worker 5 (pid: 8890)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /etc/systemd/system
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/tmp/invest_test.sock)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from /home/ubuntu/arbitrage_test/uwsgi_test.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 14 14:22:11 2020] ***
+compiled with version: 7.5.0 on 12 March 2020 15:24:34
+os: Linux-4.15.0-1060-aws #62-Ubuntu SMP Tue Feb 11 21:23:22 UTC 2020
+nodename: ip-172-31-45-93
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/systemd/system
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/arbitrage_test
+your processes number limit is 3840
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /tmp/invest_test.sock fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/ubuntu/arbitrage_test/venv
+Set PythonHome to /home/ubuntu/arbitrage_test/venv
+Python main interpreter initialized at 0x557681186a50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 240 seconds
+mapped 1001184 bytes (977 KB) for 50 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x557681186a50 pid: 2960 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2960)
+spawned uWSGI worker 1 (pid: 9065, cores: 10)
+spawned uWSGI worker 2 (pid: 9066, cores: 10)
+spawned uWSGI worker 3 (pid: 9067, cores: 10)
+spawned uWSGI worker 4 (pid: 9068, cores: 10)
+spawned uWSGI worker 5 (pid: 9069, cores: 10)
+[pid: 9069|app: 0|req: 1/1] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:22:16 2020] GET /taoli/ => generated 5910 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 9069|app: 0|req: 2/2] 202.184.199.34 () {44 vars in 784 bytes} [Sat Mar 14 14:22:16 2020] GET /_static/style.css => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+[2020-03-14 14:23:34,906] INFO in app: get http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___
+[2020-03-14 14:23:36,942] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=510090
+[2020-03-14 14:23:37,178] INFO in app: get http://www.jisilu.cn/data/qdii/qdii_list/?___jsl=LST___
+[2020-03-14 14:23:39,263] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162411
+[2020-03-14 14:23:41,389] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513100
+[2020-03-14 14:23:42,531] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162415
+[2020-03-14 14:23:43,675] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513500
+[2020-03-14 14:23:44,832] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=513030
+[2020-03-14 14:23:46,707] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162719
+[2020-03-14 14:23:48,569] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161127
+[2020-03-14 14:23:49,743] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161125
+[2020-03-14 14:23:50,925] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=159941
+[2020-03-14 14:23:52,098] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=160416
+[2020-03-14 14:23:53,935] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=161130
+[2020-03-14 14:23:54,690] INFO in app: get http://www.jisilu.cn/data/lof/stock_lof_list/?___jsl=LST___
+[2020-03-14 14:23:56,579] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=162414
+[2020-03-14 14:23:58,452] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=165516
+[2020-03-14 14:23:59,833] INFO in app: get http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker=168106
+[2020-03-14 14:24:00,415] INFO in app: get http://www.jisilu.cn/data/lof/index_lof_list/?___jsl=LST___
+[pid: 9069|app: 0|req: 3/3] 202.184.199.34 () {44 vars in 862 bytes} [Sat Mar 14 14:23:26 2020] GET /api/taoli/ => generated 1554 bytes in 34313 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 2)
+[pid: 9069|app: 0|req: 4/4] 202.184.199.34 () {44 vars in 854 bytes} [Sat Mar 14 14:24:22 2020] GET /taoli/ => generated 5927 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 9069|app: 0|req: 5/5] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:24:29 2020] GET /taoli/ => generated 5927 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 9067|app: 0|req: 1/6] 202.184.199.34 () {44 vars in 782 bytes} [Sat Mar 14 14:24:29 2020] GET /static/style.css => generated 0 bytes in 4 msecs (HTTP/1.1 200) 7 headers in 279 bytes (0 switches on core 0)
+[pid: 9069|app: 0|req: 6/7] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:25:34 2020] GET /taoli/ => generated 5915 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+[pid: 9069|app: 0|req: 7/8] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:26:45 2020] GET /taoli/ => generated 6184 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 9069|app: 0|req: 8/9] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:28:08 2020] GET /taoli/ => generated 6184 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+[pid: 9069|app: 0|req: 9/10] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:29:07 2020] GET /taoli/ => generated 6200 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+[pid: 9069|app: 0|req: 10/11] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:29:10 2020] GET /taoli/ => generated 6200 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 9069|app: 0|req: 11/12] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:29:23 2020] GET /taoli/ => generated 0 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 78 bytes (1 switches on core 3)
+[pid: 9069|app: 0|req: 12/13] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:30:10 2020] GET /taoli/ => generated 6200 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 9069|app: 0|req: 13/14] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:30:27 2020] GET /taoli/ => generated 6190 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 2)
+[pid: 9069|app: 0|req: 14/15] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:32:12 2020] GET /taoli/ => generated 5716 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 9069|app: 0|req: 15/16] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:33:55 2020] GET /taoli/ => generated 5640 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 9069|app: 0|req: 16/17] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:34:08 2020] GET /taoli/ => generated 5413 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+[pid: 9069|app: 0|req: 17/18] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:34:42 2020] GET /taoli/ => generated 5406 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 9069|app: 0|req: 18/19] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:34:45 2020] GET /taoli/ => generated 5406 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+[pid: 9069|app: 0|req: 19/20] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:34:58 2020] GET /taoli/ => generated 5569 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+[pid: 9069|app: 0|req: 20/21] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:36:41 2020] GET /taoli/ => generated 5599 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 9069|app: 0|req: 21/22] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:36:59 2020] GET /taoli/ => generated 5579 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 9069|app: 0|req: 22/23] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:37:42 2020] GET /taoli/ => generated 5579 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 9069|app: 0|req: 23/24] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:38:00 2020] GET /taoli/ => generated 5297 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 2)
+[pid: 9069|app: 0|req: 24/25] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:38:26 2020] GET /taoli/ => generated 5628 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 9069|app: 0|req: 25/26] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:38:46 2020] GET /taoli/ => generated 5590 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 9069|app: 0|req: 26/27] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:39:27 2020] GET /taoli/ => generated 5567 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+[pid: 9069|app: 0|req: 27/28] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:39:46 2020] GET /taoli/ => generated 5568 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 9069|app: 0|req: 28/29] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:40:04 2020] GET /taoli/ => generated 5573 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+[pid: 9069|app: 0|req: 29/30] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:40:07 2020] GET /taoli/ => generated 5573 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+[pid: 9069|app: 0|req: 30/31] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:42:08 2020] GET /taoli/ => generated 5577 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 9069|app: 0|req: 31/32] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:42:34 2020] GET /taoli/ => generated 5578 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 9069|app: 0|req: 32/33] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:43:34 2020] GET /taoli/ => generated 5551 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 9069|app: 0|req: 33/34] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:44:36 2020] GET /taoli/ => generated 5607 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (2 switches on core 2)
+[pid: 9069|app: 0|req: 34/35] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:44:42 2020] GET /taoli/ => generated 5607 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 9069|app: 0|req: 35/36] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:45:00 2020] GET /taoli/ => generated 5595 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 9069|app: 0|req: 36/37] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:48:04 2020] GET /taoli/ => generated 5590 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+[pid: 9069|app: 0|req: 37/38] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:48:28 2020] GET /taoli/ => generated 5591 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 9069|app: 0|req: 38/39] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:48:46 2020] GET /taoli/ => generated 5590 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+[pid: 9069|app: 0|req: 39/40] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:53:06 2020] GET /taoli/ => generated 6032 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+[pid: 9069|app: 0|req: 40/41] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:53:40 2020] GET /taoli/ => generated 5779 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 9069|app: 0|req: 41/42] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:55:01 2020] GET /taoli/ => generated 5798 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 9069|app: 0|req: 42/43] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:56:00 2020] GET /taoli/ => generated 5841 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 9069|app: 0|req: 43/44] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:56:42 2020] GET /taoli/ => generated 5850 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 2)
+[pid: 9069|app: 0|req: 44/45] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:57:13 2020] GET /taoli/ => generated 5837 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 9069|app: 0|req: 45/46] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 14:58:29 2020] GET /taoli/ => generated 5802 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 9069|app: 0|req: 46/47] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:00:00 2020] GET /taoli/ => generated 5846 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+[pid: 9069|app: 0|req: 47/48] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:01:41 2020] GET /taoli/ => generated 5857 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 9069|app: 0|req: 48/49] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:02:06 2020] GET /taoli/ => generated 5866 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+[pid: 9069|app: 0|req: 49/50] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:02:50 2020] GET /taoli/ => generated 5815 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+[pid: 9069|app: 0|req: 50/51] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:03:33 2020] GET /taoli/ => generated 5785 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 9069|app: 0|req: 51/52] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:03:38 2020] GET /taoli/ => generated 5785 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 9069|app: 0|req: 52/53] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:04:25 2020] GET /taoli/ => generated 6287 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 9069|app: 0|req: 53/54] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:05:04 2020] GET /taoli/ => generated 5745 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 2)
+[pid: 9069|app: 0|req: 54/55] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:08:27 2020] GET /taoli/ => generated 5504 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 9069|app: 0|req: 55/56] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:08:53 2020] GET /taoli/ => generated 5504 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 9069|app: 0|req: 56/57] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:13:15 2020] GET /taoli/ => generated 5688 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+[pid: 9069|app: 0|req: 57/58] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:17:52 2020] GET /taoli/ => generated 7690 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 9069|app: 0|req: 58/59] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:18:51 2020] GET /taoli/ => generated 7729 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+[pid: 9069|app: 0|req: 59/60] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:19:22 2020] GET /taoli/ => generated 7734 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+[pid: 9069|app: 0|req: 60/61] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:19:43 2020] GET /taoli/ => generated 7735 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 9069|app: 0|req: 61/62] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:19:46 2020] GET /taoli/ => generated 7735 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 9069|app: 0|req: 62/63] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:20:20 2020] GET /taoli/ => generated 7835 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 9069|app: 0|req: 63/64] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:22:49 2020] GET /taoli/ => generated 7922 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 2)
+[pid: 9069|app: 0|req: 64/65] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:23:11 2020] GET /taoli/ => generated 7933 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 9069|app: 0|req: 65/66] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:23:13 2020] GET /taoli/ => generated 7933 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 9069|app: 0|req: 66/67] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:23:46 2020] GET /taoli/ => generated 7931 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+[pid: 9069|app: 0|req: 67/68] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:24:03 2020] GET /taoli/ => generated 7931 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 7)
+[pid: 9069|app: 0|req: 68/69] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:24:14 2020] GET /taoli/ => generated 7931 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+[pid: 9069|app: 0|req: 69/70] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:26:50 2020] GET /taoli/ => generated 7926 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+[pid: 9069|app: 0|req: 70/71] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:27:28 2020] GET /taoli/ => generated 8032 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 9069|app: 0|req: 71/72] 202.184.199.34 () {44 vars in 773 bytes} [Sat Mar 14 15:28:17 2020] GET /taoli/ => generated 8032 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 9069|app: 0|req: 72/73] 202.184.199.34 () {44 vars in 701 bytes} [Sat Mar 14 15:28:18 2020] GET /static/style.css => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 279 bytes (0 switches on core 1)
+[pid: 9069|app: 0|req: 73/74] 202.184.199.34 () {44 vars in 712 bytes} [Sat Mar 14 15:28:19 2020] GET /favicon.ico => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 2)
+[pid: 9069|app: 0|req: 74/75] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:31:22 2020] GET /taoli/ => generated 8039 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 9069|app: 0|req: 75/76] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:37:47 2020] GET /taoli/ => generated 8279 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)
+[pid: 9069|app: 0|req: 76/77] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:44:14 2020] GET /taoli/ => generated 8399 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 6)
+[pid: 9069|app: 0|req: 77/78] 202.184.199.34 () {44 vars in 801 bytes} [Sat Mar 14 15:44:15 2020] GET /static/logo.jpg => generated 49258 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 7 headers in 274 bytes (0 switches on core 7)
+[pid: 9069|app: 0|req: 78/79] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:45:38 2020] GET /taoli/ => generated 8431 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 8)
+[pid: 9069|app: 0|req: 79/80] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:46:07 2020] GET /taoli/ => generated 8434 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 9)
+[pid: 9069|app: 0|req: 80/81] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:46:35 2020] GET /taoli/ => generated 8442 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 9069|app: 0|req: 81/82] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:47:58 2020] GET /taoli/ => generated 8432 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 3)
+[pid: 9069|app: 0|req: 82/83] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:49:39 2020] GET /taoli/ => generated 8450 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 9069|app: 0|req: 83/84] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:50:40 2020] GET /taoli/ => generated 8536 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 2)
+[pid: 9069|app: 0|req: 84/85] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:51:29 2020] GET /taoli/ => generated 8553 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 4)
+[pid: 9069|app: 0|req: 85/86] 202.184.199.34 () {46 vars in 885 bytes} [Sat Mar 14 15:51:55 2020] GET /taoli/ => generated 8562 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 5)

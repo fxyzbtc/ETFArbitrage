@@ -1,7 +1,0 @@
-{
-<<<<<<< HEAD
-    "python.pythonPath": "/home/ubuntu/arbitrage_test/venv/bin/python3.6"
-=======
-    "python.pythonPath": "venv/bin/python"
->>>>>>> mailNotify
-}

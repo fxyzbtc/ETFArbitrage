@@ -19,8 +19,8 @@ URLS = {'ETF':'http://www.jisilu.cn/data/etf/etf_list/?___jsl=LST___',
 }
 
 TICKER_URL = 'http://www.fundsmart.com.cn/api/fund.detail.categroy.php?type=basic&ticker={id}'
-TICKER_TAGS = ['ticker','name','navPriceRatioFcst', 'navPriceRatio','amplitudes','tradingAmount','application', 'redemption','dependentFundBeans']
-TICKER_TAGS_CN = ['代码','名称','今折溢价', '昨折溢价','价格振幅','交易量','申购', '赎回','被依赖基金']
+TICKER_TAGS = ['ticker','name','navPriceRatioFcst', 'navPriceRatio','amplitudes','tradingAmount','application', 'redemption','etfFeeders','lastTradingDay']
+TICKER_TAGS_CN = ['代码','名称','今折溢价', '昨折溢价','价格振幅','交易量','申购', '赎回','关联基金','数据时间戳']
 HEADERS = dict(zip(TICKER_TAGS, TICKER_TAGS_CN))
 
 s = requests.Session()
@@ -57,15 +57,16 @@ def api_taoli():
             application.logger.info('get {}'.format(TICKER_URL.format(id=item)))
             if _fs_filter(fs):
                 fs = {HEADERS[x]:fs[x] for x in HEADERS}
-                dt_string = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-                fs['date'] = dt_string
+                #dt_string = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
+                #fs['更新时间'] = dt_string
                 result['records'].append(fs)
-
+    print(result)
     #如果有依赖基金，格式化下
     for index,record in enumerate(result['records']):
-        if type(record['依赖的基金']) == list:
-            dep_fund = '<br>'.join([','.join(v.values()) for v in record['依赖的基金']])
-            result['records'][index]['依赖的基金'] = dep_fund
+
+        if type(record['关联基金']) == list:
+            dep_fund = '<br>'.join([','.join(v.values()) for v in record['关联基金']])
+            result['records'][index]['关联基金'] = dep_fund
 
     #open(url_for('static', filename='taoli.json'),'w').write(json.dumps(result))
     open('taoli.json','w').write(json.dumps(result))

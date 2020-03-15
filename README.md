@@ -23,21 +23,21 @@ pip3 install -r requirements.txt
 ## nginx.conf
 1. 不要使用一个server，在location中尝试用rewrite来达到两个测试服务器，规则太复杂耗时。直接改用两个服务端口对应到不同的测试socket
 1. 不要在/etc/nginx/nginx.conf中以引用方式配置server，容易出错且找不到原因（比如一直拉不起8080端口）。
+1. 如果设置location的子目录，使用alias不用使用root，否则会在root基础上叠加子目录嵌套
 
 设置两个location, rewrite 头部路径到测试环境
 ```
-http {
 server {
         listen 80;
         server_name  _;
         # Load configuration files for the default server block.
 
-        location / {
-            root /home/ubuntu/www/the-economist-ebooks;
+        location /books/ {
+            alias /home/ubuntu/www/books/;
             autoindex on;
         }
 
-        location /taoli/ {
+        location / {
             include uwsgi_params;
             uwsgi_pass unix:///tmp/invest.sock;
             uwsgi_read_timeout 120s;
@@ -47,9 +47,9 @@ server {
             proxy_redirect off;
             proxy_buffering off;
             proxy_send_timeout 120s;
-            proxy_read_timeout 120s;            
-        }        
-}
+            proxy_read_timeout 120s;
+        }
+        }
 
 server {
         listen 8080;
@@ -57,11 +57,6 @@ server {
         # Load configuration files for the default server block.
 
         location / {
-            root /home/ubuntu/www/the-economist-ebooks;
-            autoindex on;
-        }
-
-        location /taoli/ {
             include uwsgi_params;
             uwsgi_pass unix:///tmp/invest_test.sock;
             uwsgi_read_timeout 120s;
@@ -71,10 +66,10 @@ server {
             proxy_redirect off;
             proxy_buffering off;
             proxy_send_timeout 120s;
-            proxy_read_timeout 120s;            
-        }  
+            proxy_read_timeout 120s;
+        }
 
-}   
-}
+        }
+
 
 ```

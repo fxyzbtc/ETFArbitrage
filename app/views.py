@@ -31,7 +31,7 @@ s.mount('https://', HTTPAdapter(max_retries=2))
 
 class TaoLi(View):
     def dispatch_request(self):
-        result = json.load(open('taoli.json'))
+        result = json.load(open('taoli.json')) or {'records':[]}
         _time = datetime.strptime('14:00', '%H:%M')
         subform = SubscriptionForm(time=_time)
         return render_template('taoli.html', result=result, subform=subform)

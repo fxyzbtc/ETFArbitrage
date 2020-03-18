@@ -7,13 +7,22 @@
     <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
       <META HTTP-EQUIV="Expires" CONTENT="-1">    
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <link rel="stylesheet" href="../static/style.css" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>{% block title %}{% endblock %}</title>
-
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class=flashes>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+    {% endwith %}
   </head>
+  
   <body>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -30,11 +39,9 @@
         {% endblock%}   
     </div>      
 
-    <div id="note" class="rounded text-center">
-      <p>扫码关注微信号：<b>结丹记事本儿</b>，获取更多懒人投资工具</p>
-      <img src="{{ url_for('static', filename='logo.jpg') }}" alt="logo" class="img-thumbnail" style="width:100px;height:100px;"></p>
-      
-    </div>
+    {% block note %}
+
+    {% endblock %}
  
     <!-- Footer -->
 <footer class="page-footer text-center font-small bg-light">

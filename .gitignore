@@ -1,6 +1,10 @@
 venv/
 __pycache__/
-
+instance/
+app/config.py
+config.py
+*.pid
+*.log
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -11,7 +11,8 @@ master = 1
 threads = 10
 processes = 5
 ```
-如果遇到no module "encoding"等报错，需要重建venv环境即可解决。
+
+如果遇到no module "encoding"等报错，需要重建venv环境即可解决，或者检查home参数设置错误。
 ```
 rm -r venv
 pip3 freeze > requirements.txt
@@ -20,6 +21,47 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
+出现nginx-uwsgi-unavailable-modifier-requested错误，是因为uwsgi依赖python插件
+```
+sudo apt-get install uwsgi-plugin-python3
+```
+然后再uwsgi.ini配置文件中添加
+```
+plugins=python3
+```
+
+阅读uwsgi.log看启动日志，能发现python路径等错误。使用相对路径配置ini文件，可以在WSL/不同服务器之间迁移，好的配置样例如下，
+
+```
+[uwsgi]
+#配合nginx使用
+project = arbitrage
+#http-socket = 127.0.0.1:8080
+socket = /tmp/invest.sock
+plugins = python3 #
+chdir = %d
+home = .env/
+module = app:application
+#指定工作进程
+processes       = 5
+
+#每个工作进程有2个线程
+threads = 10
+#指的后台启动 日志输出的地方
+daemonize       = uwsgi.log
+#保存主进程的进程号
+pidfile = uwsgi.pid
+#虚拟环境环境路径
+
+harakiri = 240 
+http-timeout = 240 
+socket-timeout = 240 
+worker-reload-mercy = 240 
+reload-mercy = 240 
+mule-reload-mercy = 240
+
+master = 1
+```
 ## nginx.conf
 1. 不要使用一个server，在location中尝试用rewrite来达到两个测试服务器，规则太复杂耗时。直接改用两个服务端口对应到不同的测试socket
 1. 不要在/etc/nginx/nginx.conf中以引用方式配置server，容易出错且找不到原因（比如一直拉不起8080端口）。
@@ -73,3 +115,11 @@ server {
 
 
 ```
+
+# 开发陷阱
+
+## datetime/time/datetime.datetime/datetime.datetime.time
+
+## sqlalchemy.DateTime/Time Column
+
+## app structure and loading chain

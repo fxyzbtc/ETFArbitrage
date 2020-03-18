@@ -4,7 +4,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail, Message
 
-import os, config
+import os
 
 # init app
 app = Flask(__name__)

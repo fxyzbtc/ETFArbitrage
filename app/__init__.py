@@ -3,6 +3,8 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail, Message
+from flask_migrate import Migrate, MigrateCommand
+from flask_script import Manager
 
 import os
 
@@ -13,7 +15,10 @@ app.config.from_object('config')
 # initializes extensions
 db = SQLAlchemy(app)
 mail = Mail(app)
+migrate = Migrate(app, db)
 
+manager = Manager(app)
+manager.add_command('db', MigrateCommand)
 # import views
 from . import views
 app.add_url_rule('/taoli/', view_func=views.TaoLi.as_view('show_taoli'))

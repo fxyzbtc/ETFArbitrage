@@ -4,6 +4,7 @@ from threading import Thread
 from app import app
 from flask_mail import Message
  
+import decimal
 import datetime
  
 def async_send_mail(app, msg):
@@ -25,3 +26,5 @@ def alchemyencoder(obj):
         return obj.isoformat()
     elif isinstance(obj, decimal.Decimal):
         return float(obj)
+    elif isinstance(obj, str):
+        return str.encode('utf8')

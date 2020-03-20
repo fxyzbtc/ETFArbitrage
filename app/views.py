@@ -11,11 +11,13 @@ from flask import flash
 from flask import redirect
 
 import sqlalchemy
+from sqlalchemy import or_
 
 from .forms import SubscriptionForm
 from .models import db, Subscription
 from .utils import alchemyencoder
 
+from json2table import convert
 import simplejson as json
 from datetime import datetime
 from pytz import timezone
@@ -33,7 +35,7 @@ class TaoLi(View):
     def dispatch_request(self):
         result = json.load(open('taoli.json')) or {'records':[]}
         _time = datetime.strptime('14:00', '%H:%M')
-        subform = SubscriptionForm(time=_time)
+        subform = SubscriptionForm(time=_time, url='/taoli/')
         return render_template('taoli.html', result=result, subform=subform)
 
 class Subscribe(View):
@@ -123,20 +125,33 @@ class NotifyAll(View):
         tz_china = timezone('Asia/Shanghai')
         tz_utc = timezone('UTC')
         utc = datetime.utcnow().replace(tzinfo=tz_utc)
-        time_china = utc.astimezone(tz_china)
-        time_china = datetime.time(time_china)
+        _time = utc.astimezone(tz_china)
+        time_china = datetime.time(_time)
+        date_china = datetime.date(_time)
+
+        #exclude taoli.json with none etffeeders
+        _json = json.load(open('taoli.json'))
+        _json['records'] = [x for x in _json['records'] if len(x['关联基金']) > 10]
+        table_attributes = {"border":1}
+        mail_html = convert(_json, table_attributes=table_attributes)
+
+        subscriptions = Subscription.query.filter(or_(Subscription.last_send == None, Subscription.last_send != date_china)). \
+                                            filter(Subscription.time <= time_china).all()
+
+        if subscriptions:
+            
+            app.logger.info('invest::preparing to send mail to {} subscriptions'.format(len(subscriptions)))
+            for sub in subscriptions:
+                addr = sub.email
+                subject = '折溢价基金套利提醒{}'.format(date_china)
+                recipients=[addr]
+                sender = 'molartech2020@gmail.com'
+                msg = Message(subject,recipients=recipients)
+                msg.html = "<p>请<a href={host}taoli/>点击这里</a>查看详情</p><hr>{html}".format(host=request.host_url, html=mail_html)
+                mail.send(msg)
+                app.logger.info('invest::sent mail to {}'.format(addr))
+                #更新last_send date, 1 mail/day
+                sub.last_send = date_china
+                db.session.commit()
         
-        import pdb;pdb.set_trace()
-        subscriptions = Subscription.query.filter(Subscription.time <= time_china).all()
-        subscriptions = Subscription.query.all()
-        for sub in subscriptions:
-            print(time_china, sub.time)
-            addr = sub.email
-            subject = 'LOF和联接ETF套利提醒@公众号：结丹记事本儿'
-            recipients=[addr]
-            sender = 'molartech2020@gmail.com'
-            msg = Message(subject,recipients=recipients)
-            msg.html = "<b>监控到LOF和ETF联结基金折溢价套利机会，请 <a href={}taoli/>点击这里查看</a>或者浏览器打开 {}taoli/ 查看</b>".format(request.host_url, request.host_url)
-            mail.send(msg)
-        
-        return {'message': 'mails sent'}
+        return 'mails sent to {} subscriptions'.format(len(subscriptions))

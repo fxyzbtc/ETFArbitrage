@@ -5,7 +5,7 @@ app/config.py
 config.py
 *.pid
 *.log
-
+*.pid
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -85,9 +85,10 @@ class ApiTaoLi(View):
         # 过滤集思录数据
         def _fs_filter(j):
             if ('万手' in j['tradingAmount']):
-                if (float(j['navPriceRatioFcst'].replace('%',''))>=6 and j['application'] == "1") or \
-                (float(j['navPriceRatioFcst'].replace('%',''))<=-6 and j['redemption'] == "1"): # 可申购赎回
-                    return True
+                if ((float(j['navPriceRatioFcst'].replace('%',''))>=6) or \
+                (float(j['navPriceRatioFcst'].replace('%',''))<=-6)) and \
+                ('lof' in j['name'].lower() or len(j['etfFeeders']) >= 10):# 只要大于阈值就显示，方便有有持仓的换仓
+                    return True #只过滤出LOF/关联/QDII LOF，方便个人小额操作
 
         def _jsl_filter(item):
             if float(item['cell']['discount_rt'].replace('%','')) >=6 \
@@ -131,27 +132,27 @@ class NotifyAll(View):
 
         #exclude taoli.json with none etffeeders
         _json = json.load(open('taoli.json'))
-        _json['records'] = [x for x in _json['records'] if len(x['关联基金']) > 10]
-        table_attributes = {"border":1}
-        mail_html = convert(_json, table_attributes=table_attributes)
+        _json['records'] = [x for x in _json['records'] if len(x['关联基金']) > 10 or 'LOF' in x['name']] #TODO: QDII included in LOF?
+        if _json['records']:
+            table_attributes = {"border":1}
+            mail_html = convert(_json, table_attributes=table_attributes)
 
-        subscriptions = Subscription.query.filter(or_(Subscription.last_send == None, Subscription.last_send != date_china)). \
-                                            filter(Subscription.time <= time_china).all()
+            subscriptions = Subscription.query.filter(or_(Subscription.last_send == None, Subscription.last_send != date_china)). \
+                                               filter(Subscription.time <= time_china).all()
 
-        if subscriptions:
-            
-            app.logger.info('invest::preparing to send mail to {} subscriptions'.format(len(subscriptions)))
-            for sub in subscriptions:
-                addr = sub.email
-                subject = '折溢价基金套利提醒{}'.format(date_china)
-                recipients=[addr]
-                sender = 'molartech2020@gmail.com'
-                msg = Message(subject,recipients=recipients)
-                msg.html = "<p>请<a href={host}taoli/>点击这里</a>查看详情</p><hr>{html}".format(host=request.host_url, html=mail_html)
-                mail.send(msg)
-                app.logger.info('invest::sent mail to {}'.format(addr))
-                #更新last_send date, 1 mail/day
-                sub.last_send = date_china
-                db.session.commit()
-        
-        return 'mails sent to {} subscriptions'.format(len(subscriptions))
+            if subscriptions:
+                app.logger.info('invest::preparing to send mail to {} subscriptions'.format(len(subscriptions)))
+                for sub in subscriptions:
+                    addr = sub.email
+                    subject = '折溢价基金套利提醒{}'.format(date_china)
+                    recipients=[addr]
+                    sender = 'molartech2020@gmail.com'
+                    msg = Message(subject,recipients=recipients)
+                    msg.html = "<p>请<a href={host}taoli/>点击这里</a>查看详情</p><hr>{html}".format(host=request.host_url, html=mail_html)
+                    mail.send(msg)
+                    app.logger.info('invest::sent mail to {}'.format(addr))
+                    #更新last_send date, 1 mail/day
+                    sub.last_send = date_china
+                    db.session.commit()
+                
+                return 'mails sent to {} subscriptions'.format(len(subscriptions))

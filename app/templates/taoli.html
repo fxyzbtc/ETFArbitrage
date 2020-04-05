@@ -25,7 +25,7 @@
     
             <thead>
             <tr>
-            {% if result['records'] %}
+                
             {% for head in result['records'][0].keys() %}
             <th scope="col">
             {{ head }}    
@@ -35,7 +35,7 @@
             </tr>
             </thead>
             <tbody>
-                
+              {% if result['records'] %}
                 {% for record in result['records'] %}
                     <tr>
                         {% for k,v in record.items() %}

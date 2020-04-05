@@ -85,9 +85,9 @@ class ApiTaoLi(View):
         # 过滤集思录数据
         def _fs_filter(j):
             if ('万手' in j['tradingAmount']):
-                if ((float(j['navPriceRatioFcst'].replace('%',''))>=6) or \
-                (float(j['navPriceRatioFcst'].replace('%',''))<=-6)) and \
-                ('lof' iin j['name'].lower() or j['etfFeeders']>=10: # 可申购赎回
+                if (((float(j['navPriceRatioFcst'].replace('%',''))>=6) and j['application'] == "1") or \
+                ((float(j['navPriceRatioFcst'].replace('%',''))<=-6) and j['redemption'] == "1")) and \
+                ('lof' in j['name'].lower() or len(j['etfFeeders'])>=10): # 可申购赎回
                     return True
 
         def _jsl_filter(item):
@@ -130,6 +130,10 @@ class NotifyAll(View):
         time_china = datetime.time(_time)
         date_china = datetime.date(_time)
 
+        from datetime import datetime
+        if _time.weekday() == 5 or _time.weekday()==6:
+            return 'today is weekend day, be lazy'
+            
         #exclude taoli.json with none etffeeders
         _json = json.load(open('taoli.json'))
         _json['records'] = [x for x in _json['records']]

@@ -1,22 +1,20 @@
 {% extends 'base.html' %}
 
-{% block title %}折溢价*可套利*ETF/股债/QDII*基金列表{% endblock %}
+{% block title %}折溢价*可套利基金指示牌{% endblock %}
 
 {% block content %}
 
+<div class="text-center">
 <div class="card-header">
     <div class="text">
 
         <ol class="list-inline">
-            <li class="list-inline-item">筛选功能的说明: </li>
-            <li class="list-inline-item"></li>
             <li class="list-inline-item">沪深LOF/股债/QDII基金，</li>
-            <li class="list-inline-item">折价小于-6%/溢价大于6%，</li>
+            <li class="list-inline-item">折价小于-6% 或者 溢价大于6%，</li>
             <li class="list-inline-item">1万手以上，</li>
-            <li class="list-inline-item">溢价时可申购/折价时可赎回</li>
+            <li class="list-inline-item">同时溢价时开放了申购/折价时开放了赎回</li>
         </ol>    
     </div>
-    
 </div>
 
 <div class="card">
@@ -25,7 +23,7 @@
     
             <thead>
             <tr>
-                
+            {% if result['records'] %}
             {% for head in result['records'][0].keys() %}
             <th scope="col">
             {{ head }}    
@@ -35,7 +33,7 @@
             </tr>
             </thead>
             <tbody>
-              {% if result['records'] %}
+
                 {% for record in result['records'] %}
                     <tr>
                         {% for k,v in record.items() %}
@@ -47,6 +45,8 @@
                         {% endfor %}
                     </tr>
                     {% endfor %}
+            {% else %}
+            今日没有备选基金，请耐心等待
 		    {% endif %}
             </tbody>
         </table>
@@ -69,15 +69,13 @@
         </dl>                   
         
     </form>
-    <p>邮件功能的说明：只有当出现LOF可申购赎回 或者ETF（含QDII）有联结基金，并且折溢价幅度超过9%（<span>小额资金有套利机会</span>）时才会发送提醒邮件。
-    以下三种情况不会发送提醒邮件，例如折溢价幅度不大（套利存在亏损风险），ETF基金没有联接基金（需要大额场内申购），申购赎回渠道关闭。</p>
-    </div>
+   </div>
 
     </div>
-
-
+</div>    
 {% endblock %}
 
+
+
 {% block note %}
-  
 {% endblock %}

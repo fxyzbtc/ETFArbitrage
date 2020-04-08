@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from app import app, db
-from app import mail
+from .. import (app, db, mail)
 
 from flask.views import View
 from flask.views import MethodView
@@ -30,6 +29,7 @@ class Subscribe(View):
             return 'subscribe [GET]'
 
         if request.method == 'POST':
+            return '/subscribe/ post'
             if 'subscribe' in request.form.keys():
                 #request.form['subscribe']:
                 subform = SubscriptionForm(request.form)
@@ -64,50 +64,6 @@ class Subscribe(View):
                 return redirect(url_for('show_taoli'))
 
 
-<<<<<<< HEAD:app/views.py
-class ApiTaoLi(View):
-    def dispatch_request(self):
-
-        result={'records':[]}
-        # 过滤集思录数据
-        def _fs_filter(j):
-            if ('万手' in j['tradingAmount']):
-                if ((float(j['navPriceRatioFcst'].replace('%',''))>=6) or \
-                (float(j['navPriceRatioFcst'].replace('%',''))<=-6)) and \
-                ('lof' in j['name'].lower() or len(j['etfFeeders']) >= 10):# 只要大于阈值就显示，方便有有持仓的换仓
-                    return True #只过滤出LOF/关联/QDII LOF，方便个人小额操作
-
-        def _jsl_filter(item):
-            if float(item['cell']['discount_rt'].replace('%','')) >=6 \
-            or float(item['cell']['discount_rt'].replace('%','')) <=-6:
-                return True
-
-        for name in app.config['URLS']: # 按板块
-            jsl = s.get(app.config['URLS'][name]).json()['rows']
-            jsl = [item['id'] for item in jsl if _jsl_filter(item)]
-
-            # 提取fundsmart数据
-            for item in jsl: # 提取符合集思录溢价条件的标的
-                fs = s.get(app.config['TICKER_URL'].format(id=item)).json()
-
-                if _fs_filter(fs):
-                    fs = {app.config['HEADERS'][x]:fs[x] for x in app.config['HEADERS']}
-                    #dt_string = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-                    #fs['更新时间'] = dt_string
-                    result['records'].append(fs)
-
-        #如果有依赖基金，格式化下
-        for index,record in enumerate(result['records']):
-            if type(record['关联基金']) == list:
-                dep_fund = '<br>'.join([','.join(v.values()) for v in record['关联基金']])
-                result['records'][index]['关联基金'] = dep_fund
-
-        #open(url_for('static', filename='taoli.json'),'w').write(json.dumps(result))
-        open('taoli.json','w').write(json.dumps(result))
-        return result
-
-=======
->>>>>>> taolitop:pis/mod_mail/views.py
 class NotifyAll(View):
     def dispatch_request(self):
         '''LOF in name or etfFeeders not --此时可以套利或者降成本操作'''
@@ -121,7 +77,6 @@ class NotifyAll(View):
 
         #exclude taoli.json with none etffeeders
         _json = json.load(open('taoli.json'))
-<<<<<<< HEAD:app/views.py
         _json['records'] = [x for x in _json['records'] if len(x['关联基金']) > 10 or 'LOF' in x['name']] #TODO: QDII included in LOF?
         if _json['records']:
             table_attributes = {"border":1}
@@ -146,45 +101,7 @@ class NotifyAll(View):
                     db.session.commit()
                 
                 return 'mails sent to {} subscriptions'.format(len(subscriptions))
-=======
-        _json['records'] = [x for x in _json['records'] if len(x['关联基金']) > 10]
-        table_attributes = {"border":1}
-        mail_html = convert(_json, table_attributes=table_attributes)
-
-        subscriptions = Subscription.query.filter(or_(Subscription.last_send == None, Subscription.last_send != date_china)). \
-                                            filter(Subscription.time <= time_china).all()
-
-        if subscriptions:
-            
-            app.logger.info('invest::preparing to send mail to {} subscriptions'.format(len(subscriptions)))
-            for sub in subscriptions:
-                addr = sub.email
-                subject = '折溢价基金套利提醒{}'.format(date_china)
-                recipients=[addr]
-                sender = 'molartech2020@gmail.com'
-                msg = Message(subject,recipients=recipients)
-                msg.html = "<p>请<a href={host}taoli/>点击这里</a>查看详情</p><hr>{html}".format(host=request.host_url, html=mail_html)
-                mail.send(msg)
-                app.logger.info('invest::sent mail to {}'.format(addr))
-                #更新last_send date, 1 mail/day
-                sub.last_send = date_china
-                db.session.commit()
-        
-        return 'mails sent to {} subscriptions'.format(len(subscriptions))
-
-class Subscription(MethodView):
-    def get(self):
-        return super().dispatch_request()
-    def post(self):
-        return 'insert new'
-    def put(self):
-        return 'update'
-    def delete(self):
-        return 'delete'
-
-from flask import Blueprint
-bp = Blueprint('notify', __name__, url_prefix='/notify', template_folder='templates', static_folder='static')
-bp.add_url_rule('/', view_func=Subscribe.as_view('reg_notification'))
-#bp.add_url_rule('/', view_func=Subscription.as_view('subscription))
-
->>>>>>> taolitop:pis/mod_mail/views.py
+            else:
+                return {'code':1, 'message': 'no subscription found'}
+        else:
+            return {'code':2, 'message': 'nothing to notify'}

@@ -31,6 +31,8 @@ app.register_blueprint(pe_bp)
 from .mod_speculation import spec_bp
 app.register_blueprint(spec_bp)
 
+from .mod_mail import mail_bp
+app.register_blueprint(mail_bp)
 
 #main views
 from flask import Blueprint

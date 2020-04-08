@@ -24,12 +24,10 @@ from flask_mail import Mail
 from flask_mail import Message
 
 class Subscribe(View):
+    methods = ['POST']
     def dispatch_request(self):
-        if request.method == 'GET':
-            return 'subscribe [GET]'
-
         if request.method == 'POST':
-            return '/subscribe/ post'
+            
             if 'subscribe' in request.form.keys():
                 #request.form['subscribe']:
                 subform = SubscriptionForm(request.form)
@@ -49,7 +47,7 @@ class Subscribe(View):
                 #    flash('已经注册')
                 #    db.session.rollback()
                     flash('注册成功')
-                return redirect(url_for('show_taoli'))
+                return redirect(url_for('taoli.taoli_list'))
 
             if 'unsubscribe' in request.form.keys():
                 #request.form['unsubscribe']
@@ -61,7 +59,7 @@ class Subscribe(View):
                 _all = Subscription.query.filter(Subscription.email == request.form['email']).all()
                 flash('删除成功，已注册信息如下')
                 flash(json.dumps([r.as_dict() for r in _all], default = alchemyencoder))
-                return redirect(url_for('show_taoli'))
+                return redirect(url_for('taoli.taoli_list'))
 
 
 class NotifyAll(View):

@@ -4,11 +4,11 @@
 
 {% block content %}
 
-<div class="card-header">
 
-</div>
-
-<div class="card">
+<div class="card text-center">
+    <div class="card-header">
+    <h5>可套利的基金列表（含沪深LOF/股债/QDII基金，折价小于-3%可赎回或者溢价大于3%可申购，且场内交易1万手以上）</h5>
+    </div>
     <div class="card-body">
         <table class="table table-striped table-dark">
     
@@ -36,31 +36,27 @@
                     </tr>
                     {% endfor %}
             {% else %}
-            <h5>今日没有可套利基金，请耐心等待，:)</h5>
+            今日没有可套利基金，请耐心等待
 		    {% endif %}
             </tbody>
         </table>
     </div>
     <div class="card-footer text-muted">
-<p>
+
     <form method="POST" action="/mail/subscribe/">
         {{ subform.csrf_token }}
-            {{ subform.url() }}
+        {{ subform.url() }}
 
-            {{ subform.email.label }}
-            {{ subform.email()}}
+        {{ subform.email.label }}
+        {{ subform.email()}}
 
-            {{ subform.time.label }}
-            {{ subform.time() }}
+        {{ subform.time.label }}
+        {{ subform.time() }}
 
- 
-            <input name='subscribe' type="submit" value="订阅提醒">
-            <input name='unsubscribe' type="submit" value="取消提醒">
-        </dl>                   
-        
-    </form></p>
-    <p>标的说明: 沪深LOF/股债/QDII基金，折价小于-6%/溢价大于6%，1万手以上，溢价时可申购/折价时可赎回</p>
-    <p>提醒功能说明：折溢价幅度超过9%，且过滤剔除没有联结基金的ETF（含QDII）</p>
+        <input name='subscribe' type="submit" value="订阅提醒">
+        <input name='unsubscribe' type="submit" value="取消提醒">                   
+    </form>
+
     </div>
 
     </div>

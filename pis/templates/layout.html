@@ -8,8 +8,7 @@
       <META HTTP-EQUIV="Expires" CONTENT="-1">    
     <meta charset="utf-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-    <link rel="stylesheet" href="../static/style.css" />
-    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -52,7 +51,7 @@
 <footer class="page-footer text-center font-small bg-light">
 
   <!-- Copyright -->
-  <div class="footer-copyright py-3"><p>股市有风险，投机需谨慎，本页面数据不代表任何投资建议。</p>
+  <div class="footer-copyright py-3"><p>本站的任何信息不代表任何投资建议。</p>
     <p>© 2020 Copyright:
     <a href="https://btcz.im/">www.btcz.im</a>, 公众号:结丹记事本儿</p>
     <p><img src="{{ url_for('static', filename='logo.png') }}" alt="logo" class="img-thumbnail" style="width:80px;height:80px;"></p>

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from app import app
+from app import app, db
 from app import mail
 
 from flask.views import View
@@ -14,8 +14,8 @@ import sqlalchemy
 from sqlalchemy import or_
 
 from .forms import SubscriptionForm
-from .models import db, Subscription
-from .utils import alchemyencoder
+from .models import Subscription
+from ..utils import alchemyencoder
 
 from json2table import convert
 import simplejson as json
@@ -23,20 +23,6 @@ from datetime import datetime
 from pytz import timezone
 from flask_mail import Mail
 from flask_mail import Message
-
-# init requests
-import requests
-from requests.adapters import HTTPAdapter
-s = requests.Session()
-s.mount('http://', HTTPAdapter(max_retries=2))
-s.mount('https://', HTTPAdapter(max_retries=2))
-
-class TaoLi(View):
-    def dispatch_request(self):
-        result = json.load(open('taoli.json')) or {'records':[]}
-        _time = datetime.strptime('14:00', '%H:%M')
-        subform = SubscriptionForm(time=_time, url='/taoli/')
-        return render_template('taoli.html', result=result, subform=subform)
 
 class Subscribe(View):
     def dispatch_request(self):
@@ -78,6 +64,7 @@ class Subscribe(View):
                 return redirect(url_for('show_taoli'))
 
 
+<<<<<<< HEAD:app/views.py
 class ApiTaoLi(View):
     def dispatch_request(self):
 
@@ -119,6 +106,8 @@ class ApiTaoLi(View):
         open('taoli.json','w').write(json.dumps(result))
         return result
 
+=======
+>>>>>>> taolitop:pis/mod_mail/views.py
 class NotifyAll(View):
     def dispatch_request(self):
         '''LOF in name or etfFeeders not --此时可以套利或者降成本操作'''
@@ -132,6 +121,7 @@ class NotifyAll(View):
 
         #exclude taoli.json with none etffeeders
         _json = json.load(open('taoli.json'))
+<<<<<<< HEAD:app/views.py
         _json['records'] = [x for x in _json['records'] if len(x['关联基金']) > 10 or 'LOF' in x['name']] #TODO: QDII included in LOF?
         if _json['records']:
             table_attributes = {"border":1}
@@ -156,3 +146,45 @@ class NotifyAll(View):
                     db.session.commit()
                 
                 return 'mails sent to {} subscriptions'.format(len(subscriptions))
+=======
+        _json['records'] = [x for x in _json['records'] if len(x['关联基金']) > 10]
+        table_attributes = {"border":1}
+        mail_html = convert(_json, table_attributes=table_attributes)
+
+        subscriptions = Subscription.query.filter(or_(Subscription.last_send == None, Subscription.last_send != date_china)). \
+                                            filter(Subscription.time <= time_china).all()
+
+        if subscriptions:
+            
+            app.logger.info('invest::preparing to send mail to {} subscriptions'.format(len(subscriptions)))
+            for sub in subscriptions:
+                addr = sub.email
+                subject = '折溢价基金套利提醒{}'.format(date_china)
+                recipients=[addr]
+                sender = 'molartech2020@gmail.com'
+                msg = Message(subject,recipients=recipients)
+                msg.html = "<p>请<a href={host}taoli/>点击这里</a>查看详情</p><hr>{html}".format(host=request.host_url, html=mail_html)
+                mail.send(msg)
+                app.logger.info('invest::sent mail to {}'.format(addr))
+                #更新last_send date, 1 mail/day
+                sub.last_send = date_china
+                db.session.commit()
+        
+        return 'mails sent to {} subscriptions'.format(len(subscriptions))
+
+class Subscription(MethodView):
+    def get(self):
+        return super().dispatch_request()
+    def post(self):
+        return 'insert new'
+    def put(self):
+        return 'update'
+    def delete(self):
+        return 'delete'
+
+from flask import Blueprint
+bp = Blueprint('notify', __name__, url_prefix='/notify', template_folder='templates', static_folder='static')
+bp.add_url_rule('/', view_func=Subscribe.as_view('reg_notification'))
+#bp.add_url_rule('/', view_func=Subscription.as_view('subscription))
+
+>>>>>>> taolitop:pis/mod_mail/views.py

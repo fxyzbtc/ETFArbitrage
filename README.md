@@ -123,3 +123,46 @@ server {
 ## sqlalchemy.DateTime/Time Column
 
 ## app structure and loading chain
+
+# 常见报错
+## Flask No application found
+在执行db/mail等扩展时常遇到报错
+RuntimeError: No application found. Either work inside a view function or push an application context. See http://flask-sqlalchemy.pocoo.org/contexts/.
+可以在命令行中导入flask app_context
+```
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'My connection string'
+db.init_app(app)
+
+with app.app_context():
+    db.create_all()
+```
+
+## uwsgi不支持flask调试开关
+uwsgi并不会捕捉flask的调试错误，需要这么做：
+```
+from werkzeug.debug import DebuggedApplication
+app.wsgi_app = DebuggedApplication(app.wsgi_app, True)
+```
+
+## 批量更新SQLAlchemy Model记录
+```
+entries = []
+for item in pepb['entries']:
+    entry = PePb(**item)
+    entries.append(entry)
+
+#db.session.add_all(entries)
+db.session.bulk_save_objects(entries)
+db.session.commit()
+
+```
+
+# postgres提示column不存在，实际存在
+column名字含有大写字母，需要双引号括起来。
+```
+select * from "indice" where "stockId"=1000000000995;
+```
+
+建议全部改为小写，否则后续sqlalchemy的按列查询也会出错。
+

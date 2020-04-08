@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block title %}新基金指南{% endblock %}
+
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        新成立基金主题排名
+      </div>
+<div class="card-body">
+<ul class="list-group">
+{% for item in records %}
+<li class="list-group-item d-flex justify-content-between align-items-center">{{item['name']}}<span class="badge badge-primary badge-pill">{{item['count']}}</span></li>
+{% endfor %}
+</ul>
+
+<ul class="list-group list-group-horizontal"></ul>
+
+</ul>
+</div>
+<div class="card-footer text-muted">
+    指南说明: 捕捉证监会新成立及在发售新基（大约3个月内），提取关键主题词呈现。股市有风险，投机需谨慎。
+</div>
+</div>
+
+{% endblock %}
+
+
+{% block note %}
+
+{% endblock %}

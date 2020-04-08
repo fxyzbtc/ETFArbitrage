@@ -28,7 +28,8 @@ from .mod_taoli import taoli_bp
 app.register_blueprint(taoli_bp)
 from .mod_pe import pe_bp
 app.register_blueprint(pe_bp)
-
+from .mod_speculation import spec_bp
+app.register_blueprint(spec_bp)
 
 
 #main views

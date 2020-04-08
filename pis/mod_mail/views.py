@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from app import app
+from app import app, db
 from app import mail
 
 from flask.views import View
@@ -14,8 +14,8 @@ import sqlalchemy
 from sqlalchemy import or_
 
 from .forms import SubscriptionForm
-from .models import db, Subscription
-from .utils import alchemyencoder
+from .models import Subscription
+from ..utils import alchemyencoder
 
 from json2table import convert
 import simplejson as json
@@ -23,20 +23,6 @@ from datetime import datetime
 from pytz import timezone
 from flask_mail import Mail
 from flask_mail import Message
-
-# init requests
-import requests
-from requests.adapters import HTTPAdapter
-s = requests.Session()
-s.mount('http://', HTTPAdapter(max_retries=2))
-s.mount('https://', HTTPAdapter(max_retries=2))
-
-class TaoLi(View):
-    def dispatch_request(self):
-        result = json.load(open('taoli.json')) or {'records':[]}
-        _time = datetime.strptime('14:00', '%H:%M')
-        subform = SubscriptionForm(time=_time, url='/taoli/')
-        return render_template('taoli.html', result=result, subform=subform)
 
 class Subscribe(View):
     def dispatch_request(self):
@@ -78,46 +64,6 @@ class Subscribe(View):
                 return redirect(url_for('show_taoli'))
 
 
-class ApiTaoLi(View):
-    def dispatch_request(self):
-
-        result={'records':[]}
-        # 过滤集思录数据
-        def _fs_filter(j):
-            if ('万手' in j['tradingAmount']):
-                if (float(j['navPriceRatioFcst'].replace('%',''))>=6 and j['application'] == "1") or \
-                (float(j['navPriceRatioFcst'].replace('%',''))<=-6 and j['redemption'] == "1"): # 可申购赎回
-                    return True
-
-        def _jsl_filter(item):
-            if float(item['cell']['discount_rt'].replace('%','')) >=6 \
-            or float(item['cell']['discount_rt'].replace('%','')) <=-6:
-                return True
-
-        for name in app.config['URLS']: # 按板块
-            jsl = s.get(app.config['URLS'][name]).json()['rows']
-            jsl = [item['id'] for item in jsl if _jsl_filter(item)]
-
-            # 提取fundsmart数据
-            for item in jsl: # 提取符合集思录溢价条件的标的
-                fs = s.get(app.config['TICKER_URL'].format(id=item)).json()
-
-                if _fs_filter(fs):
-                    fs = {app.config['HEADERS'][x]:fs[x] for x in app.config['HEADERS']}
-                    #dt_string = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-                    #fs['更新时间'] = dt_string
-                    result['records'].append(fs)
-
-        #如果有依赖基金，格式化下
-        for index,record in enumerate(result['records']):
-            if type(record['关联基金']) == list:
-                dep_fund = '<br>'.join([','.join(v.values()) for v in record['关联基金']])
-                result['records'][index]['关联基金'] = dep_fund
-
-        #open(url_for('static', filename='taoli.json'),'w').write(json.dumps(result))
-        open('taoli.json','w').write(json.dumps(result))
-        return result
-
 class NotifyAll(View):
     def dispatch_request(self):
         '''LOF in name or etfFeeders not --此时可以套利或者降成本操作'''
@@ -155,3 +101,19 @@ class NotifyAll(View):
                 db.session.commit()
         
         return 'mails sent to {} subscriptions'.format(len(subscriptions))
+
+class Subscription(MethodView):
+    def get(self):
+        return super().dispatch_request()
+    def post(self):
+        return 'insert new'
+    def put(self):
+        return 'update'
+    def delete(self):
+        return 'delete'
+
+from flask import Blueprint
+bp = Blueprint('notify', __name__, url_prefix='/notify', template_folder='templates', static_folder='static')
+bp.add_url_rule('/', view_func=Subscribe.as_view('reg_notification'))
+#bp.add_url_rule('/', view_func=Subscription.as_view('subscription))
+

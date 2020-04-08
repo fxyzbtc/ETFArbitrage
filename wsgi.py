@@ -1,6 +1,4 @@
-import os
-from app import app, db
-from app.models import Subscription
+from pis import app
 
 if __name__ == '__main__':
     app.run()

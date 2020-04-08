@@ -1,22 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'layout.html' %}
 
 {% block title %}折溢价*可套利*ETF/股债/QDII*基金列表{% endblock %}
 
 {% block content %}
 
 <div class="card-header">
-    <div class="text">
 
-        <ol class="list-inline">
-            <li class="list-inline-item">筛选功能的说明: </li>
-            <li class="list-inline-item"></li>
-            <li class="list-inline-item">沪深LOF/股债/QDII基金，</li>
-            <li class="list-inline-item">折价小于-6%/溢价大于6%，</li>
-            <li class="list-inline-item">1万手以上，</li>
-            <li class="list-inline-item">溢价时可申购/折价时可赎回</li>
-        </ol>    
-    </div>
-    
 </div>
 
 <div class="card">
@@ -40,7 +29,6 @@
                     <tr>
                         {% for k,v in record.items() %}
                         <td>
-        
                             {{ v|safe }}
         
                         </td>
@@ -51,7 +39,7 @@
         </table>
     </div>
     <div class="card-footer text-muted">
-
+<p>
     <form method="POST" action="/subscribe/">
         {{ subform.csrf_token }}
             {{ subform.url() }}
@@ -67,9 +55,9 @@
             <input name='unsubscribe' type="submit" value="取消提醒">
         </dl>                   
         
-    </form>
-    <p>邮件功能的说明：只有当出现LOF可申购赎回 或者ETF（含QDII）有联结基金，并且折溢价幅度超过9%（<span>小额资金有套利机会</span>）时才会发送提醒邮件。
-    以下三种情况不会发送提醒邮件，例如折溢价幅度不大（套利存在亏损风险），ETF基金没有联接基金（需要大额场内申购），申购赎回渠道关闭。</p>
+    </form></p>
+    <p>标的说明: 沪深LOF/股债/QDII基金，折价小于-6%/溢价大于6%，1万手以上，溢价时可申购/折价时可赎回</p>
+    <p>提醒功能说明：折溢价幅度超过9%，且过滤剔除没有联结基金的ETF（含QDII）</p>
     </div>
 
     </div>

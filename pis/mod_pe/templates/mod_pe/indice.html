@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}指数估值{% endblock %}
+
+
+
+{% block content %}
+{{ table|safe }}
+{% endblock %}
+
+
+{% block note %}
+{% endblock %}
+
+{% block script %}
+<table>
+    <tbody><tr>
+        <td>Min PE分位:</td>
+        <td><input type="text" id="pe_min" name="pe_min"></td>
+    </tr>
+    <tr>
+        <td>Min PB分位:</td>
+        <td><input type="text" id="pb_min" name="pb_min"></td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+    $.fn.dataTable.ext.search.push(
+        function( settings, data, dataIndex ) {
+            var pe_min = parseFloat( $('#pe_min').val(), 10 );
+            var pb_min = parseFloat( $('#pb_min').val(), 10 );
+            var pe = parseFloat( data[7] ) || 0; // use data for the age column
+            var pb = parseFloat( data[5] ) || 0; // use data for the age column
+            if ( ( isNaN( pe_min ) && isNaN( pb_min ) ) ||
+                ( isNaN( pe_min ) && pb <= pb_min ) ||
+                ( pe <= pe_min   && isNaN( pb_min ) ) ||
+                ( pe <= pe_min   && pb <= pb_min ) )
+            //if (pe<= pe_min)
+            {
+                return true;
+            }
+            return false;
+        }
+    );
+
+    $(document).ready( function () {
+        let table = $('#datatable').DataTable({
+            responsive: true,
+            fixedHeader: true,
+            colReorder: true,
+
+            lengthMenu: [
+                [ 10, 50, 100, -1 ],
+                [ '10 rows', '50 rows', '100 rows', 'All' ]
+            ],
+
+            dom:    "<'row'>" +
+                    "<'row'<'col'l><'col'f>>" +
+                    "<'row'<'col-sm-12'tr>>" +
+                    "<'row'<'col'i><'col'p>>",
+
+
+            select: true,
+        }
+    );
+
+    $('#pe_min, #pb_min').keyup( function() {
+        table.draw();
+    } );
+
+});
+
+    // new $.fn.dataTable.SearchPanes(table, {});
+    // table.searchPanes.container().prependTo(table.table().container());
+
+    </script>
+{% endblock %}
+
+<!-- 
+l - length changing input control
+f - filtering input
+r - processing display element
+t - The table!
+i - Table information summary
+p - pagination control
+
+
+B - Buttons
+R - ColReorder
+S - Scroller
+P - SearchPanes
+
+lfrtip
+
+-->

@@ -26,6 +26,7 @@ import time
 
 class SubscriptionForm(FlaskForm):
     url = HiddenField('数据地址', validators=[DataRequired()])
+    #FIXME x@139com
     email = EmailField('接收邮箱', validators=[Email(), DataRequired()])
     time = TimeField('提醒时间', validators=[DataRequired])
     

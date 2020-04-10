@@ -29,7 +29,9 @@ def _pull_fund():
     TYPE = {'xcln':'新成立基金', 'zs':'在售基金'}
     json_re = re.compile(r'\[\[.*\]\]')
     xcln_resp = reqs.get(URL_TMP.format(type='xcln')).text
-    data = json.loads(json_re.findall(xcln_resp)[0])
+    _data = json_re.findall(xcln_resp)[0]
+    _data = _data.replace(',,', ',0,') # fix none regular data
+    data = json.loads(_data)
     zs_resp = reqs.get(URL_TMP.format(type='zs')).text
     data.extend(json.loads(json_re.findall(zs_resp)[0]))
 

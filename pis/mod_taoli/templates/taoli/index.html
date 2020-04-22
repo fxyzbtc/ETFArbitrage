@@ -1,13 +1,13 @@
 {% extends 'layout.html' %}
 
-{% block title %}折溢价*可套利*ETF/股债/QDII*基金列表{% endblock %}
+{% block title %}折溢价套利{% endblock %}
 
 {% block content %}
 
 
 <div class="card text-center">
     <div class="card-header">
-    <h5>可套利的基金列表（含沪深LOF/股债/QDII基金，折价小于-3%可赎回或者溢价大于3%可申购，且场内交易1万手以上）</h5>
+    <p>这个列表涵盖了沪深LOF/海外QDII基金，筛选条件是实时折价率小于-3%或者溢价率大于5%，且交易量>1万手。<b>对QDII类，指的是T-1折溢价</b>。邮件通知列表时，附加了可申购和可赎回条件。</p>
     </div>
     <div class="card-body">
         <table class="table table-striped table-dark">
@@ -36,7 +36,7 @@
                     </tr>
                     {% endfor %}
             {% else %}
-            今日没有可套利基金，请耐心等待
+            今日无折溢价标的，请耐心等待
 		    {% endif %}
             </tbody>
         </table>

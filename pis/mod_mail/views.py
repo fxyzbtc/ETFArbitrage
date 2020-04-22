@@ -75,7 +75,16 @@ class NotifyAll(View):
 
         #exclude taoli.json with none etffeeders
         _json = json.load(open('taoli.json'))
-        _json['records'] = [x for x in _json['records'] if len(x['关联基金']) > 10 or 'LOF' in x['name']] #TODO: QDII included in LOF?
+        
+        #存在关联基金，可以近似套利
+        # _json['records'] = [x for x in _json['records'] \
+        #     if len(x['关联基金']) > 10 or 'LOF' or 'QDII-ETF' in x['name']] #TODO: QDII included in LOF?
+        
+        # 折溢价达到标准，并且申购赎回对应开放了
+        _json['records'] = [x for x in _json['records'] \
+            if (float(x['navPriceRatioFcst'].replace('%',''))>=5 and (x['application'] == "1" or len(x['关联基金']) > 10)) or \
+            (float(x['navPriceRatioFcst'].replace('%',''))<=-3 and (x['redemption'] ==  "1" or len(x['关联基金']) > 10))]
+
         if _json['records']:
             table_attributes = {"border":1}
             mail_html = convert(_json, table_attributes=table_attributes)

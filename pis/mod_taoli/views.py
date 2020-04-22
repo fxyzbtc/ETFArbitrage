@@ -44,18 +44,19 @@ class Update(View):
     def dispatch_request(self):
 
         result={'records':[]}
-        # 过滤集思录数据
+        # 自定义过滤
         def _fs_filter(j):
             if ('万手' in j['tradingAmount']):
-                if (float(j['navPriceRatioFcst'].replace('%',''))>=6 and j['application'] == "1") or \
-                (float(j['navPriceRatioFcst'].replace('%',''))<=-6 and j['redemption'] == "1"): # 可申购赎回
+                if (float(j['navPriceRatioFcst'].replace('%',''))>=3) or \
+                (float(j['navPriceRatioFcst'].replace('%',''))<=-3): # 可申购赎回
                     return True
 
+        #集思录过滤
         def _jsl_filter(item):
-            if float(item['cell']['discount_rt'].replace('%','')) >=6 \
-            or float(item['cell']['discount_rt'].replace('%','')) <=-6:
+            if float(item['cell']['discount_rt'].replace('%','')) >=5 \
+            or float(item['cell']['discount_rt'].replace('%','')) <=-3:
                 return True
-
+                
         for name in app.config['URLS']: # 按板块
             jsl = reqs.get(app.config['URLS'][name]).json()['rows']
             jsl = [item['id'] for item in jsl if _jsl_filter(item)]

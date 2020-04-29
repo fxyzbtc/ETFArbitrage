@@ -53,10 +53,13 @@ class Update(View):
 
         #集思录过滤
         def _jsl_filter(item):
-            if float(item['cell']['discount_rt'].replace('%','')) >=5 \
-            or float(item['cell']['discount_rt'].replace('%','')) <=-3:
-                return True
-                
+            try:
+                if float(item['cell']['discount_rt'].replace('%','')) >=5 \
+                or float(item['cell']['discount_rt'].replace('%','')) <=-3:
+                    return True
+            except ValueError: #出现 - 无折溢价数值
+                pass
+
         for name in app.config['URLS']: # 按板块
             jsl = reqs.get(app.config['URLS'][name]).json()['rows']
             jsl = [item['id'] for item in jsl if _jsl_filter(item)]
